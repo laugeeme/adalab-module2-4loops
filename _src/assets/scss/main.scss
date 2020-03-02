@@ -1,5 +1,7 @@
 @import 'base/reset';
-@import 'core/variables';
+@import 'utils/variables';
+@import 'utils/tipography';
+@import 'utils/mixins';
 @import 'layouts/landing';
 @import 'layouts/header';
 @import 'layouts/preview';
@@ -7,4 +9,3 @@
 @import 'layouts/form-fill';
 @import 'layouts/form-share';
 @import 'layouts/footer';
-
