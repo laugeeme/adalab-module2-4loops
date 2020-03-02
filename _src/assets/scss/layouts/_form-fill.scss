@@ -1,7 +1,9 @@
 .fill-form {
     padding: 0 20px;
+    font-family: $mainFont;
     
     h2 {
+        font-weight: bold;
         text-transform: uppercase;
         font-size: 18px;
         color: #54585a;
@@ -10,7 +12,13 @@
         padding-bottom: 25px;
     }
 
+    i {
+        color: #e17334;
+    }
+
     .fill {
+        font-size: 14px;
+
         label {
             display: block;
             padding-bottom: 7px;
@@ -23,8 +31,7 @@
             height: 30px;
             padding: 5px;
             border: 1px solid #a2deaf;
-            color: rgb(197, 197, 197);
-            font-size: 14px;
+            color: rgba(197, 197, 197, 0.3,);
             margin-bottom: 20px;
         }
         button {
