@@ -1,5 +1,5 @@
 .page-index {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 
@@ -9,6 +9,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include forTablet {
+    height: 963px;
+  }
 }
 
 
@@ -16,6 +20,12 @@
   width: 250px;
   height: 63px;
   padding-top: 95px;
+
+  @include forTablet {
+    width: 419px;
+    height: 105px;
+    padding-top: 350px;
+  }
 }
 
 
@@ -35,22 +45,32 @@
     margin-bottom: 0px;
     padding-top: 35.4px;
     @include text-capitalize;
+
+    @include forTablet {
+      font-size: 24px;
+    }
   }
 
   p {
-    font-family: $fontBody;
-    font-size: 12.8px;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
     text-align: center;
-    color: $colorLogo;
     padding-left: 27.2px;
     padding-right: 28px;
     padding-bottom: 17.8px;
+    width:264.8px;
     @include text-capitalize;
+
+    @include forTablet {
+      font-size: 16px;
+      padding-left: 219px;
+      padding-right: 218px;
+      width: 331px;
+      height: 48px;
+    }
   }
 
 }
@@ -66,6 +86,13 @@
   text-align: center;
   list-style-type: none;
 
+  @include forTablet {
+    width: 325px;
+    height: 86px;
+    border: 2px solid rgba(225, 115, 52, 0.21);
+    border-radius: 5px;
+  }
+
 
   & .landing-options-icon {
     font-size: 22.4px;
@@ -76,14 +103,20 @@
     line-height: normal;
     letter-spacing: normal;
     text-align: center;
+
+    @include forTablet{
+      font-size: 28px;
+    }
   }
 
 
 
   & .landing-options-text {
-    font-family: $fontBody;
-    color: $colorBody;
     @include text-capitalize;
+
+    @include forTablet{
+      font-size:16px;
+    }
   }
 }
 
@@ -104,4 +137,8 @@
   border-radius: 21px;
   margin-top: 38.6px;
   line-height: 42px;
+
+  @include forTablet{
+    margin-top: 186px;
+  }
 }
