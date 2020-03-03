@@ -1,39 +1,107 @@
 .page-index {
   width: 100vw;
   height: 100vh;
+}
+
+.hero-container {
+  height: 458px;
+  background-color: #f5f5f5;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+
+.landing-logo {
+  width: 250px;
+  height: 63px;
+  padding-top: 95px;
+}
 
 
 
-
-
-  .landing-text {
-    h1 {
-      width: 223px;
-      height: 24px;
-      font-family: Merriweather;
-      font-size: 19.2px;
-      font-weight: 900;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      text-align: center;
-      color: #e17334;
-    }
-
-    p {
-      font-family: OpenSans;
-      font-size: 12.8px;
-      font-weight: normal;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      text-align: center;
-      color: #114e4e;
-    }
-
+.landing-text {
+  h1 {
+    font-family: $fontLandingTitle;
+    font-size: 19.2px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: $colorIcons;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 35.4px;
+    @include text-capitalize;
   }
+
+  p {
+    font-family: $fontBody;
+    font-size: 12.8px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: $colorLogo;
+    padding-left: 27.2px;
+    padding-right: 28px;
+    padding-bottom: 17.8px;
+    @include text-capitalize;
+  }
+
+}
+
+.landing-options {
+  width: 268px;
+  height: 73.8px;
+  border: 1.6px solid rgba(225, 115, 52, 0.21);
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  text-align: center;
+  list-style-type: none;
+
+
+  & .landing-options-icon {
+    font-size: 22.4px;
+    color: $colorIcons;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+  }
+
+
+
+  & .landing-options-text {
+    font-family: $fontBody;
+    color: $colorBody;
+    @include text-capitalize;
+  }
+}
+
+.landing-start {
+  text-decoration: none;
+  font-family: $fontBody;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  @include text-uppercase;
+  height: 42px;
+  width: 129px;
+  background-color: #438792;
+  border-radius: 21px;
+  margin-top: 38.6px;
+  line-height: 42px;
 }
