@@ -29,3 +29,21 @@
     background-color: white;
     overflow: hidden;
   }
+
+
+  .btn{
+    width:50%;
+    position:relative;
+    height:50px;
+  }
+  
+  .icon{
+    position:absolute;
+    left:18px;
+    top:9px;
+    font-size:30px;
+  }
+  
+  .wrapper{
+    padding:5%;
+  }
