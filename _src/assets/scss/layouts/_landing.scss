@@ -1,0 +1,143 @@
+.page-index {
+  width: 100%;
+  height: 100vh;
+}
+
+.hero-container {
+  height: 458px;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include forTablet {
+    height: 963px;
+  }
+}
+
+
+.landing-logo {
+  width: 250px;
+  height: 63px;
+  padding-top: 95px;
+
+  @include forTablet {
+    width: 419px;
+    height: 105px;
+    padding-top: 350px;
+  }
+}
+
+
+
+.landing-text {
+  h1 {
+    font-family: $fontLandingTitle;
+    font-size: 19.2px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: $colorIcons;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 35.4px;
+    @include text-capitalize;
+
+    @include forTablet {
+      font-size: 24px;
+    }
+  }
+
+  p {
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    padding-left: 27.2px;
+    padding-right: 28px;
+    padding-bottom: 17.8px;
+    width:264.8px;
+    @include text-capitalize;
+
+    @include forTablet {
+      font-size: 16px;
+      padding-left: 219px;
+      padding-right: 218px;
+      width: 331px;
+      height: 48px;
+    }
+  }
+
+}
+
+.landing-options {
+  width: 268px;
+  height: 73.8px;
+  border: 1.6px solid rgba(225, 115, 52, 0.21);
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  text-align: center;
+  list-style-type: none;
+
+  @include forTablet {
+    width: 325px;
+    height: 86px;
+    border: 2px solid rgba(225, 115, 52, 0.21);
+    border-radius: 5px;
+  }
+
+
+  & .landing-options-icon {
+    font-size: 22.4px;
+    color: $colorIcons;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+
+    @include forTablet{
+      font-size: 28px;
+    }
+  }
+
+
+
+  & .landing-options-text {
+    @include text-capitalize;
+
+    @include forTablet{
+      font-size:16px;
+    }
+  }
+}
+
+.landing-start {
+  text-decoration: none;
+  font-family: $fontBody;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  @include text-uppercase;
+  height: 42px;
+  width: 129px;
+  background-color: #438792;
+  border-radius: 21px;
+  margin-top: 38.6px;
+  line-height: 42px;
+
+  @include forTablet{
+    margin-top: 186px;
+  }
+}

@@ -29,9 +29,10 @@ $colorFooter: #6b6b6b;
     font-family: $fontBody;
     font-size: 12.8px;
     color: $colorBody; 
-    // @include forTablet {
-    //     font-size: 16px;
-    // }
+
+   /*  @include forTablet {
+    font-size: 16px;
+    }  */
 }
 
 .font__footer {
