@@ -1,0 +1,54 @@
+.design-form-container {
+  padding: 0 20px;
+  font-family: $mainFont;
+}
+
+.design-form-title {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 27px;
+
+  & h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #54585a;
+    padding-bottom: 22px;
+  }
+
+  & i {
+    color: #e17334;
+  }
+}
+
+
+.design-form-form {
+    font-size: 14px;  //provisional
+    width: 280px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+
+    h3 {
+        font-family: $fontBody;
+        color: #54585a;
+        font-size: 14px;
+        line-height: 19px;
+        @include text-uppercase;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal
+      }
+    
+    
+
+  & input {
+    width: 17px;
+    height: 17px;
+  
+  }
+}
+
+

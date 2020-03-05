@@ -1,0 +1,158 @@
+body {
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Style the panel container of the buttons*/
+.panel {
+  margin: 0px auto;
+  padding: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #f5f5f5;
+
+  &__coll {
+    margin: 0px 20px 0px 20px;
+    color: $colorBody;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 20px;
+    border-bottom: 0.25px solid #d8d8d8;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+  }
+
+  &__content {
+    padding: 0 18px;
+    margin: 0px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: 1px solid #d8d8d8;
+
+    i {
+      color: $colorIcons;
+      padding-right: 10px;
+    }
+
+    button {
+      border: none;
+    }
+
+    button::-moz-focus-inner {
+      border: 0;
+    }
+    
+  }
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+.active,
+.panel__coll:hover {
+  background-color: #f5f5f5;
+}
+
+.panel__coll:after {
+  font-family: "Material Icons";
+  content: "\e316";
+  transform: rotate(180deg);
+  transition: all 0.2s;
+  color: $colorBody;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  transform: scale(1);
+  transition: all 0.2s;
+}
+
+
+
+
+/*********************SECOND collapsible after click on btn-create ********************/
+
+/* Style the buttons that are used to open and close the accordion panel*/
+
+.active2,
+.btn-create:after {
+  background-color: #d5d5d5;
+}
+
+.fa-address-card {
+  color: #f5f5f5;
+  font-size: 22px;
+  padding: 14px 9px 14px 13px;
+}
+
+.btn-create {
+  margin: 30px 50px 30px 50px;
+  height: 50px;
+  width: 199px;
+  background-color: $colorIcons;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: #f5f5f5;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: $fontBody;
+  padding: 13px 13px 13px 0px;
+}
+
+.panel__coll--child {
+  cursor: pointer;
+  border-bottom: 0.25px solid #d8d8d8;
+}
+
+/* Style the collapsible content2. Note: hidden by default */
+
+.panel__content2 {
+  padding: 0 18px;
+  margin: 0px 20px 0px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  font-family: $fontBody;
+  font-size: 18px;
+  font-weight: 600;
+  color: $colorBody;
+}
+
+.btn-twit {
+  margin: 0px auto;
+  margin-bottom: 15px;
+  height: 30px;
+  width: 181px;
+  background-color: #00a0f5;
+  border-radius: 3px;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #f5f5f5;
+  font-size: 14px;
+  font-family: $fontBody;
+}
+
+.fa-twitter {
+  color: #f5f5f5;
+  font-size: 18px;
+}
