@@ -27,7 +27,7 @@
         input {
             box-sizing: border-box;
             display: block;
-            width: 96%;
+            width: 100%;
             height: 30px;
             padding: 5px;
             border: 1px solid #a2deaf;
@@ -50,7 +50,12 @@
             border: 1px solid #a2deaf;
         }
     }
-    @media all and (min-width:768px) {
-        padding: 0 40px;
+    
+    @include forTablet {
+        width: 40vw;
+    }
+
+    @include forPc {
+        width: 35vw;
     }
 }

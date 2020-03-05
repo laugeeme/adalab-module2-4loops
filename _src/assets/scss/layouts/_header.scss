@@ -1,0 +1,11 @@
+.page__header {
+    height: 111px;
+    padding: 31px 0 0 40px;
+    box-sizing: border-box;
+    .logo__container {
+        width: 201px;
+        img {
+            width: 100%;
+        }
+    }   
+}

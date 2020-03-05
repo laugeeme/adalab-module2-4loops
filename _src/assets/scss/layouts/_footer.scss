@@ -1,0 +1,18 @@
+.page__footer {
+    display: flex;
+    flex-direction: column;;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+    .footer__logo--container {
+        height: 40px;
+        margin-top: 12px;
+        img {
+            height: 100%;
+        }
+    }
+    @include forTablet {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
