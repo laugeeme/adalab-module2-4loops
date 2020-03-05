@@ -1,0 +1,72 @@
+/* VARIEBLES TIPOGRAFÍA */
+$fontLandingTitle: 'Merriweather';
+$fontBody: 'Open Sans';
+$fontTitle: 'Montserrat';
+$colorIcons: #e17334;
+$colorLogo: #114e4e;
+$colorBody: #54585a;
+$colorFooter: #6b6b6b;
+
+.font__landing--title {
+    font-family: $fontLandingTitle;
+    font-size: 19.2px;
+    color: $colorIcons;
+    // @include forTablet {
+    //     font-size: 24px;
+    // }
+}
+
+.font__subtitle {
+    font-family: $fontBody;
+    font-size: 12.8px;
+    color: $colorLogo;
+    // @include forTablet {
+    //     font-size: 16px;
+    // }
+}
+
+.font__icons {
+    font-family: $fontBody;
+    font-size: 12.8px;
+    color: $colorBody; 
+
+   /*  @include forTablet {
+    font-size: 16px;
+    }  */
+}
+
+.font__footer {
+    font-family: $fontBody;
+    font-size: 14px;
+    color: $colorFooter;
+
+}
+
+.font__form {
+    font-family: $fontBody;
+    font-weight: 400;
+    font-size: 18px;
+    color: $colorBody;
+}
+
+.form__font--labels {
+    font-family: $fontBody;
+    font-size: 14px;
+    color: $colorLogo;
+    line-height: 20px;
+}
+
+.font__preview--title {
+    font-family: $fontTitle;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    color: $colorLogo;
+}
+
+.font__preview--subtitle {
+    font-family: $fontTitle;
+    font-size: 16px;
+    line-height: 20px;
+    color: $colorBody;
+}
