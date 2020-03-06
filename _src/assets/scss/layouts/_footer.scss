@@ -3,7 +3,9 @@
     flex-direction: column;;
     justify-content: center;
     align-items: center;
-    height: 110px;
+    // height: 110px;
+    height: 15vh;
+    background-color: white;
     .footer__logo--container {
         height: 40px;
         margin-top: 12px;
@@ -14,5 +16,6 @@
     @include forTablet {
         flex-direction: row;
         justify-content: space-between;
+        height: 10vh;
     }
 }

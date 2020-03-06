@@ -1,0 +1,122 @@
+.design-form-container {
+  padding: 0 20px;
+  font-family: $mainFont;
+  height: 260px;
+}
+
+.design-form-title {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 27px;
+
+  & h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #54585a;
+    padding-bottom: 22px;
+  }
+
+  & i {
+    color: #e17334;
+  }
+}
+
+
+.design-form-form {
+    font-size: 14px;  //provisional
+    width: 280px;
+    height: 60px; 
+    display: flex;
+    justify-content: space-between;
+
+    h3 {
+        font-family: $fontBody;
+        color: #54585a;
+        font-size: 14px;
+        line-height: 19px;
+        @include text-uppercase;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal
+      }
+    
+    
+
+  & input {
+    width: 17px;
+    height: 17px;
+    
+  }
+}
+
+
+.palette{
+  display: flex;
+  
+}
+
+.palette-colour-container{
+  display: flex;
+  padding-bottom: 20px ;
+  padding-left: 10px;
+  padding-right: 20px;
+
+}
+
+.palette-colour{
+  width: 30px;
+  height: 25px;
+}
+
+.green1{
+  background-color:#114e4e;
+}
+
+.green2{
+  background-color:#438792;
+}
+
+.green3{
+  background-color:#a2deaf;
+}
+
+
+.red1{
+  background-color: #420101;
+}
+
+.red2{
+  background-color:#bd1010;
+}
+
+.red3{
+  background-color: #e95626;
+}
+
+.colourg{
+  background-color: #3e5b65;
+}
+
+.coloury{
+  background-color: #eab052;
+}
+
+.colourb{
+  background-color: #a0c0cf;
+}
+
+
+.ourcolour1{
+  background-color: rgb(15, 76, 129);
+}
+
+.ourcolour2{
+  background-color: rgb(192, 215, 37);
+}
+
+.ourcolour3{
+  background-color:rgb(242, 107, 91);
+}
