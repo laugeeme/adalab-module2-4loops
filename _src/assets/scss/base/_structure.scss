@@ -1,0 +1,67 @@
+// body {
+//     background-color: #F5F5F5;
+//     box-sizing: border-box;
+//     margin: 0px;
+//     padding: 0px;
+//   }
+  /* Style the panel container of the buttons*/
+  .panel {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #F5F5F5;
+    i {
+        color: $colorIcons;
+        padding-right: 10px;
+      }
+      button {
+        border: none;
+      }
+      button::-moz-focus-inner {
+        border: 0;
+      }
+    &__coll {
+      margin: 0px 20px 0px 20px;
+      color: $colorBody;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 20px;
+      border-bottom: 0.25px solid #D8D8D8;
+      text-align: left;
+      outline: none;
+      font-size: 18px;
+    }
+    &__content {
+      padding: 0 18px;
+      margin: 0px 20px 0px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      border-bottom: 1px solid #D8D8D8;
+    }
+  }
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active,
+  .panel__coll:hover {
+    background-color: #F5F5F5;
+  }
+  .panel__coll:after {
+    font-family: "Material Icons";
+    content: "\e316";
+    transform: rotate(180deg);
+    transition: all 0.2s;
+    color: $colorBody;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  .active:after {
+    transform: scale(1);
+    transition: all 0.2s;
+  }
+  

@@ -3,29 +3,17 @@ $tablet: 768px;
 $pc: 1024px;
 
 @mixin forTablet {
-  @media all and (min-width:$tablet) {
-    @content
-  }
-}
-
-;
-
+    @media all and (min-width:$tablet){@content}
+};
 @mixin forPc {
-  @media all and (min-width:$pc) {
-    @content
-  }
-}
-
-;
-
-
+    @media all and (min-width:$pc){@content}
+};
 
 @mixin text-capitalize {
-  &::first-letter {
-    text-transform: capitalize;
+    &::first-letter {
+      text-transform: capitalize;
+    }
   }
-}
-
-@mixin text-uppercase {
-  text-transform: uppercase;
-}
+  @mixin text-uppercase {
+    text-transform: uppercase;
+  }
