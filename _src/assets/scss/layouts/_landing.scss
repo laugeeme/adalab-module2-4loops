@@ -137,11 +137,4 @@
     border-radius: 21px;
     margin-top: 38.6px;
     line-height: 42px;
-
-    @include forTablet{
-      margin-top: 186px;
-    }
-    @include forPc {
-      margin-top: 2%;
-    }
   }
