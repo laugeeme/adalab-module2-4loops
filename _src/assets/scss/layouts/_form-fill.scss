@@ -1,20 +1,39 @@
+// .panel__content {
+
 .fill-form {
     padding: 0 20px;
     font-family: $mainFont;
+    // position: relative;
+    width: 100%;
     
-    h2 {
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 18px;
-        color: #54585a;
-        border-top: 1px solid #d8d8d8;
-        padding-top: 10px;
-        padding-bottom: 25px;
-    }
+    // h2 {
+    //     font-weight: bold;
+    //     text-transform: uppercase;
+    //     font-size: 18px;
+    //     color: #54585a;
+    //     border-top: 1px solid #d8d8d8;
+    //     padding-top: 10px;
+    //     padding-bottom: 25px;
+    // }
 
-    i {
-        color: #e17334;
-    }
+    // i {
+    //     color: #e17334;
+    // }
+
+    // .updown {
+    //     height:18px;
+    //     width: 25px;
+    //     position: absolute;
+    //     top: 10px;
+    //     right: 20px;
+    //     background: transparent;
+    //     border-color: transparent;
+    //     outline: none;
+
+    //     img {
+    //         width: 100%;
+    //     }
+    // }
 
     .fill {
         font-size: 14px;
@@ -41,6 +60,8 @@
             background-color:#e17334;
             color: white;
             margin-bottom: 20px;
+            border-color: transparent;
+            outline: none;
         }
         .empty-box {
             width:30px;
@@ -50,12 +71,14 @@
             border: 1px solid #a2deaf;
         }
     }
-    
-    @include forTablet {
-        width: 40vw;
-    }
 
+    @include forTablet {
+        width: 44vw;
+    }
     @include forPc {
         width: 35vw;
     }
 }
+// }
+
+
