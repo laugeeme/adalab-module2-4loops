@@ -19,6 +19,8 @@ $colorPaletteFour1:rgb(15, 76, 129);
 $colorPaletteFour2:rgb(192, 215, 37);
 $colorPaletteFour3:rgb(242, 107, 91);
 
+$colorBackgroundImage: linear-gradient(to bottom, #f5f5f5, #ffffff 9%);
+
 
 .font__landing--title {
     font-family: $fontLandingTitle;
@@ -56,10 +58,10 @@ $colorPaletteFour3:rgb(242, 107, 91);
 }
 
 .font__form {
-    font-family: $fontBody;
-    font-weight: 400;
     font-size: 18px;
-    color: $colorBody;
+    font-family: $fontBody;
+    font-weight: 600;
+    background-image: $colorBackgroundImage;
 }
 
 .form__font--labels {
