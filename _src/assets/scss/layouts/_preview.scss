@@ -1,18 +1,26 @@
 .container {
-    padding: 20px 40px;
+  padding: 0px;
+  margin: 0px;
+  background:$colorBackgroundImage;
+  @include forTablet {
+    padding-top: 20px;
+    padding-right: 40px;
+  }
 }
 .page__home--main {
-    @include forTablet {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        background: linear-gradient(#f5f5f5, #ffffff);
-    }
+  @include forTablet {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    // background:$colorBackgroundImage
+  }
 }
 .page__preview {
   background: linear-gradient(#bfcdd0, #dde9ed);
   padding: 10% 15%;
   .button_reset {
+    margin-left: 20px;
+    margin-bottom: 20px;
     border: 1px solid white;
     border-radius: 25px;
     background-color: transparent;
@@ -29,50 +37,48 @@
     width: 240px;
     height: 329px;
     background-color: white;
-    margin-top: 20px;
-        .preview__card--header {
-        padding: 21px 0 10px 20px;
-        position: relative;
-            h2 {
-                display: inline;
-            }
-            .preview__style--color {
-                width: 5px;
-                height: 42px;
-                background-color: #438792;
-                position: absolute;
-                left: 0px;
-                top: 21px;
-            }
-        }
-        .preview__card--picture {
-            height: 200px;;
-            background: url(https://media.giphy.com/media/Jq8EtJlWaYlQ6pziVp/giphy.gif);
-            background-size: cover;
-            background-position: center;
-        }
-        .preview__card--links {
-            padding: 10px 0 0 15px;
-            .preview__card--icon {
-                display: inline-block;
-                font-size: 18px;
-                color: $colorLogo;
-                border: 2px solid #a2deaf;
-                border-radius: 50px;
-                background-color: transparent;
-                width: 32px;
-                height: 32px;
-                margin: 5px;
-            }
-        }
+    margin: 0px auto;
+    .preview__card--header {
+      padding: 21px 0 10px 20px;
+      position: relative;
+      h2 {
+        display: inline;
+      }
+      .preview__style--color {
+        width: 5px;
+        height: 42px;
+        background-color: #438792;
+        position: absolute;
+        left: 0px;
+        top: 21px;
+      }
     }
-    @include forTablet {
-        width: 50vw;
-        height: 100%;
+    .preview__card--picture {
+      height: 200px;
+      background: url(https://media.giphy.com/media/Jq8EtJlWaYlQ6pziVp/giphy.gif);
+      background-size: cover;
+      background-position: center;
     }
-    @include forPc {
-        width: 60vw;
+    .preview__card--links {
+      padding: 10px 0 0 15px;
+      .preview__card--icon {
+        display: inline-block;
+        font-size: 18px;
+        color: $colorLogo;
+        border: 2px solid #a2deaf;
+        border-radius: 50px;
+        background-color: transparent;
+        width: 32px;
+        height: 32px;
+        margin: 5px;
+      }
     }
+  }
+  @include forTablet {
+    width: 50vw;
+    height: 100%;
+  }
+  @include forPc {
+    width: 60vw;
+  }
 }
-
-
