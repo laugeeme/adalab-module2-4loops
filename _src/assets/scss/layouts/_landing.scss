@@ -1,6 +1,5 @@
 .page-index {
   width: 100%;
-  // height: 100vh;
 }
 
 .hero-container {
@@ -9,13 +8,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 85vh;
-  padding-top: 95px;
 
   @include forTablet {
     height: 963px;
     height: 90vh;
-    padding-top: 230px; //puesto a ojo
   }
 }
 
@@ -62,16 +60,12 @@
     line-height: normal;
     letter-spacing: normal;
     text-align: center;
-    // padding-left: 27.2px;
-    // padding-right: 28px;
     padding-bottom: 17.8px;
     width:264.8px;
     @include text-capitalize;
 
     @include forTablet {
       font-size: 16px;
-      // padding-left: 219px;
-      // padding-right: 218px;
       width: 331px;
       height: 48px;
     }
@@ -125,25 +119,22 @@
   }
 }
 
-.landing-start {
-  text-decoration: none;
-  font-family: $fontBody;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
-  letter-spacing: normal;
-  text-align: center;
-  @include text-uppercase;
-  height: 42px;
-  width: 129px;
-  background-color: #438792;
-  border-radius: 21px;
-  margin-top: 38.6px;
-  line-height: 42px;
 
-  @include forTablet{
-    margin-top: 186px;
+  .landing-start {
+    text-decoration: none;
+    font-family: $fontBody;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+    @include text-uppercase;
+    height: 42px;
+    width: 129px;
+    background-color: #438792;
+    border-radius: 21px;
+    margin-top: 38.6px;
+    line-height: 42px;
   }
-}
