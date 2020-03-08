@@ -66,7 +66,7 @@
   font-family: "Material Icons";
   content: "\e316";
   transform: rotate(180deg);
-  transition: all 0.2s;
+  transition: all 0.1s;
   color: $colorBody;
   font-weight: bold;
   float: right;
@@ -74,5 +74,5 @@
 }
 .active:after {
   transform: scale(1);
-  transition: all 0.2s;
+  transition: all 0.1s;
 }
