@@ -37,7 +37,7 @@
     width: 240px;
     height: 329px;
     background-color: white;
-    margin: 0px auto;
+    // margin: 0px auto;
     .preview__card--header {
       padding: 21px 0 10px 20px;
       position: relative;
@@ -54,6 +54,7 @@
       }
     }
     .preview__card--picture {
+      z-index: 20;
       height: 200px;
       background: url(https://media.giphy.com/media/Jq8EtJlWaYlQ6pziVp/giphy.gif);
       background-size: cover;
@@ -62,7 +63,7 @@
     .preview__card--links {
       padding: 10px 0 0 15px;
       .preview__card--icon {
-        display: inline-block;
+        // display: inline-block;
         font-size: 18px;
         color: $colorLogo;
         border: 2px solid #a2deaf;
@@ -81,4 +82,21 @@
   @include forPc {
     width: 60vw;
   }
+}
+.hidden {
+  display: none;
+}
+.fixed {
+  @include forTablet{
+    position: fixed;
+    }
+}
+.fixed__mobile {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 2;
+  transform: scalez(0.9);
 }
