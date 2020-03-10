@@ -80,4 +80,4 @@ emailInput.addEventListener('keyup', showEmailIcon);
 phoneInput.addEventListener('keyup', showPhoneIcon);
 linkedinInput.addEventListener('keyup', showLinkedinIcon);
 githubInput.addEventListener('keyup', showGithubIcon);
-window.addEventListener('scroll', fixCardOnScroll);
+// window.addEventListener('scroll', fixCardOnScroll);
