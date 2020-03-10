@@ -14,11 +14,11 @@ const githubInput = document.querySelector('#github');
 function showEmailIcon () {
 
     if (emailInput.value === '') {
-        cardIconMail.classList.add('hidden');
+        cardIconMail.classList.add('opacity');
     }
 
     if (emailInput.value !== '') {
-        cardIconMail.classList.remove('hidden');
+        cardIconMail.classList.remove('opacity');
         cardIconMail.classList.remove('hidden-icons');
     }
 }
@@ -26,11 +26,11 @@ function showEmailIcon () {
 function showPhoneIcon () {
 
     if (phoneInput.value === '') {
-        cardIconPhone.classList.add('hidden');
+        cardIconPhone.classList.add('opacity');
     }
 
     if (phoneInput.value !== '') {
-        cardIconPhone.classList.remove('hidden');
+        cardIconPhone.classList.remove('opacity');
         cardIconPhone.classList.remove('hidden-icons');
     }
 }
@@ -38,11 +38,11 @@ function showPhoneIcon () {
 function showLinkedinIcon () {
 
     if (linkedinInput.value === '') {
-        cardIconLinkedin.classList.add('hidden');
+        cardIconLinkedin.classList.add('opacity');
     }
 
     if (linkedinInput.value !== '') {
-        cardIconLinkedin.classList.remove('hidden');
+        cardIconLinkedin.classList.remove('opacity');
         cardIconLinkedin.classList.remove('hidden-icons');
     }
 }
@@ -50,34 +50,34 @@ function showLinkedinIcon () {
 function showGithubIcon () {
 
     if (githubInput.value === '') {
-        cardIconGithub.classList.add('hidden');
+        cardIconGithub.classList.add('opacity');
     }
 
     if (githubInput.value !== '') {
-        cardIconGithub.classList.remove('hidden');
+        cardIconGithub.classList.remove('opacity');
         cardIconGithub.classList.remove('hidden-icons');
     }
 }
 
-function fixCardOnScroll () {
+// function fixCardOnScroll () {
 
-    const previewContainer = document.querySelector('.preview__card--container');
-    const previewContainerMobile = document.querySelector('.page__preview');
-    const buttonReset = document.querySelector('.button_reset');
+//     const previewContainer = document.querySelector('.preview__card--container');
+//     const previewContainerMobile = document.querySelector('.page__preview');
+//     const buttonReset = document.querySelector('.button_reset');
 
 
-    if (window.scrollY > 10) {
-        previewContainer.classList.add('fixed');
-    } 
-    if (screen.width < 768 && window.scrollY > 120) {
-        previewContainerMobile.classList.add('fixed__mobile');
-        buttonReset.classList.add('hidden')
-        //habría que añadir además un margen-top a "diseña" para que no desaparezca de repente
-    } else {
-        previewContainerMobile.classList.remove('fixed__mobile');
-        buttonReset.classList.remove('hidden')
-    }
-}
+//     if (window.scrollY > 10) {
+//         previewContainer.classList.add('fixed');
+//     } 
+//     if (screen.width < 768 && window.scrollY > 120) {
+//         previewContainerMobile.classList.add('fixed__mobile');
+//         buttonReset.classList.add('hidden')
+//         //habría que añadir además un margen-top a "diseña" para que no desaparezca de repente
+//     } else {
+//         previewContainerMobile.classList.remove('fixed__mobile');
+//         buttonReset.classList.remove('hidden')
+//     }
+// }
 
 
 emailInput.addEventListener('keyup', showEmailIcon);
@@ -86,9 +86,12 @@ linkedinInput.addEventListener('keyup', showLinkedinIcon);
 githubInput.addEventListener('keyup', showGithubIcon);
 // window.addEventListener('scroll', fixCardOnScroll);
 
+
 //// Función para que los iconos desaparezcan si no se rellenan antes de compartir
 
 const clickButtonShare = document.querySelector ('.btn-share');
+const clickButtonDesign = document.querySelector ('.btn-design')
+const clickButtonFill = document.querySelector ('.btn-fill')
 
 function hideIcons () {
 
@@ -107,3 +110,14 @@ function hideIcons () {
 }
 
 clickButtonShare.addEventListener('click', hideIcons)
+
+//Función para cerrar formularios cuando se edita uno
+
+// function hideFormsOtherThanShare () {
+    
+    
+// }
+
+// clickButtonShare.addEventListener('click', hideFormsOtherThanShare)
+// clickButtonDesign.addEventListener('click', hideFormsOtherThanDesign)
+// clickButtonFill.addEventListener('click', hideFormsOtherThanFill)
