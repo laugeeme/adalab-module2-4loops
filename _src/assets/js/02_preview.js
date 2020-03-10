@@ -10,6 +10,20 @@ const phoneInput = document.querySelector('#phone');
 const linkedinInput = document.querySelector('#linkedin');
 const githubInput = document.querySelector('#github');
 
+// const inputsIcons = document.querySelectorAll('.input_icon');
+
+// function hideIcons () {
+
+//     if (inputsIcons.value !== '') {
+
+//         for (let input of inputsIcons) {
+//             inputsIcons.classList.add('hide')    
+//         }
+
+//     }
+// }
+
+
 function showEmailIcon () {
 
     if (emailInput.value === '') {
@@ -63,7 +77,7 @@ function fixCardOnScroll () {
 
     if (window.scrollY > 10) {
         previewContainer.classList.add('fixed');
-    }
+    } 
     if (screen.width < 768 && window.scrollY > 120) {
         previewContainerMobile.classList.add('fixed__mobile');
         buttonReset.classList.add('hidden')
@@ -72,7 +86,6 @@ function fixCardOnScroll () {
         previewContainerMobile.classList.remove('fixed__mobile');
         buttonReset.classList.remove('hidden')
     }
-
 }
 
 
