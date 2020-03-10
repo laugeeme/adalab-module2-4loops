@@ -10,19 +10,6 @@ const phoneInput = document.querySelector('#phone');
 const linkedinInput = document.querySelector('#linkedin');
 const githubInput = document.querySelector('#github');
 
-// const inputsIcons = document.querySelectorAll('.input_icon');
-
-// function hideIcons () {
-
-//     if (inputsIcons.value !== '') {
-
-//         for (let input of inputsIcons) {
-//             inputsIcons.classList.add('hide')    
-//         }
-
-//     }
-// }
-
 
 function showEmailIcon () {
 
@@ -32,6 +19,7 @@ function showEmailIcon () {
 
     if (emailInput.value !== '') {
         cardIconMail.classList.remove('hidden');
+        cardIconMail.classList.remove('hidden-icons');
     }
 }
 
@@ -43,6 +31,7 @@ function showPhoneIcon () {
 
     if (phoneInput.value !== '') {
         cardIconPhone.classList.remove('hidden');
+        cardIconPhone.classList.remove('hidden-icons');
     }
 }
 
@@ -54,6 +43,7 @@ function showLinkedinIcon () {
 
     if (linkedinInput.value !== '') {
         cardIconLinkedin.classList.remove('hidden');
+        cardIconLinkedin.classList.remove('hidden-icons');
     }
 }
 
@@ -65,6 +55,7 @@ function showGithubIcon () {
 
     if (githubInput.value !== '') {
         cardIconGithub.classList.remove('hidden');
+        cardIconGithub.classList.remove('hidden-icons');
     }
 }
 
@@ -94,3 +85,25 @@ phoneInput.addEventListener('keyup', showPhoneIcon);
 linkedinInput.addEventListener('keyup', showLinkedinIcon);
 githubInput.addEventListener('keyup', showGithubIcon);
 // window.addEventListener('scroll', fixCardOnScroll);
+
+//// Función para que los iconos desaparezcan si no se rellenan antes de compartir
+
+const clickButtonShare = document.querySelector ('.btn-share');
+
+function hideIcons () {
+
+    if (emailInput.value === '') {
+        cardIconMail.classList.add('hidden-icons');
+    }
+    if (phoneInput.value === '') {
+        cardIconPhone.classList.add('hidden-icons');
+    }
+    if (linkedinInput.value === '') {
+        cardIconLinkedin.classList.add('hidden-icons');
+    } 
+    if (githubInput.value === '') {
+        cardIconGithub.classList.add('hidden-icons');
+    } 
+}
+
+clickButtonShare.addEventListener('click', hideIcons)
