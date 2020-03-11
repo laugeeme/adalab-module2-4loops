@@ -1,12 +1,34 @@
 .page__header {
-    height: 111px;
-    padding: 31px 0 0 40px;
-    box-sizing: border-box;
-    .logo__container {
-        width: 201px;
-        position: relative;
-        img {
-            width: 100%;
-        }
-    }   
+  height: 150px;
+  padding: 31px 0 0 40px;
+  box-sizing: border-box;
+
+  .logo__container {
+    width: 201px;
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+
+    .logo__4loop {
+      position: absolute;
+      right: 0px;
+      font-family: monospace;
+      font-size: 16px;
+      width: 500px;
+      padding-left: 50px;
+    }
+  }
+
+  .logo_4loop-letter {
+
+    font-size: 18px;//antes 30px
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  }
+
+
+
+
 }

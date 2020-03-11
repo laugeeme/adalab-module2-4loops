@@ -90,8 +90,6 @@ githubInput.addEventListener('keyup', showGithubIcon);
 //// Función para que los iconos desaparezcan si no se rellenan antes de compartir
 
 const clickButtonShare = document.querySelector ('.btn-share');
-const clickButtonDesign = document.querySelector ('.btn-design')
-const clickButtonFill = document.querySelector ('.btn-fill')
 
 function hideIcons () {
 
@@ -124,18 +122,39 @@ clickButtonShare.addEventListener('click', hideIcons)
 
 //Función para ajustar el alto de pantalla al abrir los formularios 
 
-const previewBackground = document.querySelector('.page__home--main');
- 
+// const previewBackground = document.getElementById('page__preview');
+const previewBackground = document.querySelector('.page__preview');
+const mainContainer = document.querySelector('.page__home--main');
+// const previewBackgroundHeight = parseInt(previewBackground.style.pixelHeight);
 
-function updateWindowHeight () {
-    previewBackground.height = window.innerHeight
-    console.log(window.innerHeight)
-    console.log(previewBackground.height)
-} 
-console.log(window.innerHeight)
-console.log('altura fuera de la formula', parseInt(previewBackground.height))
+// const clickButtonDesign = document.querySelector ('.btn-design')
+const clickButtonFill = document.querySelector ('.btn-fill')
+
+function setMainWidth () {
+    const mainHeight = mainContainer.clientHeight;
+    console.log('main', mainHeight)
+}
+
+// clickButtonDesign.addEventListener('mouseover', setMainWidth);
+clickButtonFill.addEventListener('mouseout', setMainWidth);
+// clickButtonShare.addEventListener('mouseover', setMainWidth);
 
 
-clickButtonDesign.addEventListener('click', updateWindowHeight);
-clickButtonFill.addEventListener('click', updateWindowHeight);
-clickButtonShare.addEventListener('click', updateWindowHeight);
+// function updateWindowHeight () {
+    
+//     // previewBackground.style.height = window.innerHeight
+//     // previewBackground.style.pixelHeight += "1700";
+//     console.log('ventana', window.innerHeight);
+//     console.log('fondo', previewBackground.clientHeight)
+    
+// } 
+
+// console.log('ventana fuera', window.innerHeight)
+// console.log('fondo fuera', previewBackground);
+// console.log('fondo fuera', typeof(previewBackground));
+// console.log('fondo fuera isNaN', isNaN(previewBackground));
+
+
+// clickButtonDesign.addEventListener('click', updateWindowHeight);
+// clickButtonFill.addEventListener('click', updateWindowHeight);
+// clickButtonShare.addEventListener('click', updateWindowHeight);
