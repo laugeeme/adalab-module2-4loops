@@ -1,0 +1,13 @@
+.logo__container {
+    position: relative;
+  .logo__loop {
+    position: absolute;
+    right: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+  }
+}
+
+.page__preview {
+    background-color: $colorIcons;
+}

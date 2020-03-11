@@ -121,3 +121,21 @@ clickButtonShare.addEventListener('click', hideIcons)
 // clickButtonShare.addEventListener('click', hideFormsOtherThanShare)
 // clickButtonDesign.addEventListener('click', hideFormsOtherThanDesign)
 // clickButtonFill.addEventListener('click', hideFormsOtherThanFill)
+
+//Función para ajustar el alto de pantalla al abrir los formularios 
+
+const previewBackground = document.querySelector('.page__home--main');
+ 
+
+function updateWindowHeight () {
+    previewBackground.height = window.innerHeight
+    console.log(window.innerHeight)
+    console.log(previewBackground.height)
+} 
+console.log(window.innerHeight)
+console.log('altura fuera de la formula', parseInt(previewBackground.height))
+
+
+clickButtonDesign.addEventListener('click', updateWindowHeight);
+clickButtonFill.addEventListener('click', updateWindowHeight);
+clickButtonShare.addEventListener('click', updateWindowHeight);
