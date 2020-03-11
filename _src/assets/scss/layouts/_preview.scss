@@ -1,3 +1,4 @@
+//ESTILOS DE ESTRUCTURA
 .container {
   padding: 0px;
   margin: 0px;
@@ -19,21 +20,26 @@
   }
 }
 
+//ESTILOS DEL PREVIEW
+
 .page__preview {
-  background: linear-gradient(#bfcdd0, #dde9ed);
+  // background: linear-gradient(#bfcdd0, #dde9ed);
+  background-color: #de5846;
   padding: 10% 15%;
+  display: flex;
+  justify-content: center;
 
   .button_reset {
-    margin-left: 20px;
+    // margin-left: 20px;
     margin-bottom: 20px;
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 25px;
     background-color: transparent;
     width: 75px;
     height: 30px;
     font-family: $fontBody;
     font-size: 12px;
-    color: $colorBody;
+    color: white;
 
     i {
       padding-right: 6px;
@@ -68,13 +74,15 @@
     .preview__card--picture {
       z-index: 20;
       height: 200px;
-      background: url(https://media.giphy.com/media/Jq8EtJlWaYlQ6pziVp/giphy.gif);
+      // background: url(https://media.giphy.com/media/Jq8EtJlWaYlQ6pziVp/giphy.gif);
+      background: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e8afef60261411.5a44784a9dcc3.gif);
       background-size: cover;
       background-position: center;
     }
 
     .preview__card--links {
-      padding: 10px 0 0 15px;
+      // padding: 10px 0 0 15px;
+      text-align: center;
 
       .preview__card--icon {
         // display: inline-block;
@@ -97,6 +105,14 @@
 
   @include forPc {
     width: 60vw;
+  }
+  
+}
+.loop__background--preview {
+  margin-top: 5px;
+  text-align: center;
+  img {
+    width: 150px;
   }
 }
 .opacity {

@@ -4,8 +4,15 @@
     box-sizing: border-box;
     .logo__container {
         width: 201px;
+        position: relative;
         img {
             width: 100%;
         }
+        // .logo__4loop {
+        //     position: absolute;
+        //     right: 0px;
+        //     font-family: monospace;
+        //     font-size: 16px;
+        // }
     }   
 }
