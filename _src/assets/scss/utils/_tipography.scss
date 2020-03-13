@@ -16,9 +16,14 @@ $colorPaletteTwo3:#e95626;
 $colorPaletteThree1:#3e5b65;
 $colorPaletteThree2:#eab052;
 $colorPaletteThree3:#a0c0cf;
-$colorPaletteFour1:rgb(15, 76, 129);
+$colorPaletteFour1: #F38181;
+$colorPaletteFour2:#00DFFC;
+$colorPaletteFour3:#FCE38A;
+
+
+/* $colorPaletteFour1:rgb(15, 76, 129);
 $colorPaletteFour2:rgb(192, 215, 37);
-$colorPaletteFour3:rgb(242, 107, 91);
+$colorPaletteFour3:rgb(242, 107, 91); */
 
 $colorBackgroundImage: linear-gradient(to bottom, #f5f5f5, #ffffff 9%);
 
@@ -86,3 +91,10 @@ $colorBackgroundImage: linear-gradient(to bottom, #f5f5f5, #ffffff 9%);
     line-height: 20px;
     color: $colorBody;
 }
+
+.logo_4loop-letter {
+
+    font-size: 18px;//antes 30px
+    font-family: 'Prompt', sans-serif;
+
+  }
