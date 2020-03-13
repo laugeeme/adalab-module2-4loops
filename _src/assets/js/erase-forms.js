@@ -6,8 +6,11 @@ function resetForm (){
     document.getElementById("myForm").reset();
     document.getElementById("myFormPalette").reset();
     resetPreview();
-}
+    removeCanvas();
+    hiddeCamera();
+    
 
+}
 
 function resetPreview(){    // Esta función reseteará el style de colores, el nombre y puesto y los iconos.
 
@@ -21,6 +24,9 @@ function resetPreview(){    // Esta función reseteará el style de colores, el 
     previewJobPosition.innerHTML= 'Front-end developer';
 }
 
+function removeCanvas (){
+    canvas.classList.add('hiddenCanvas');
+    canvas.classList.remove('showCanvas'); 
+}
 
 
-resetButton.addEventListener('click', resetForm());
