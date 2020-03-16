@@ -9,6 +9,9 @@
     .footer__logo--container {
         height: 40px;
         margin-top: 12px;
+        @include forTablet {
+            margin-top: 0px;
+        }
         img {
             height: 100%;
         }
