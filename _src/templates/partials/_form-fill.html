@@ -1,31 +1,44 @@
 <button type="button" class="panel__coll font__form btn-fill"><i class="far fa-keyboard"></i>Rellena</button>
 <div class="panel__content display__none" id="form__fill">
-    <div class="fill-form">
-        <!-- <h2><i class="far fa-keyboard"></i> Rellena</h2>
-        <button class="updown"><img src="./assets/images/angle.svg"/></button> -->
-        <form class="fill" id="myForm" action="/signup" method="post">
+  <div class="fill-form">
+    
+    <form class="fill" id="myForm" action="/signup" method="post">
 
-            <label for="name">Nombre Completo</label>
-            <input placeholder="Ej: Sally Jill" id="name" type="text" name="name" required/>
 
-            <label for="job">Puesto</label>
-            <input placeholder="Ej: Front-end unicorn" id="job" type="text" name="job" required/>
+      <label for="name">Nombre Completo</label>
+      <input placeholder="Ej: Sally Jill" id="name" type="text" name="name" required />
 
-            <label for="fillButton">Imagen de Perfil</label>
-            <button id="fillButton">Añadir imagen</button>
-            <input class="empty-box"/>
+      <label for="job">Puesto</label>
+      <input placeholder="Ej: Front-end unicorn" id="job" type="text" name="job" required />
 
-            <label for="email">Email</label>
-            <input placeholder="Ej: sally-hill@gmail.com" id="email" class="input_icon" type="email" name="email" required/>
+      <label for="fillButton">Imagen de Perfil</label>
+      <button id="fillButton">Añadir imagen</button>
+      <input class="empty-box" />
 
-            <label for="phone">Teléfono</label>
-            <input placeholder="Ej: 555-55-55-55" id="phone" class="input_icon" type="tel" name="phone"/>
+      <button id="cameraButton">¡Hazte una foto!</button>
 
-            <label for="linkedin">Linkedin</label>
-            <input placeholder="Ej: linkedin.com/in/sally.hill" id="linkedin" class="input_icon" type="text" name="linkedin" required/>
+      <!—Aquí el video embebido de la webcam -->
+      <div class="video-wrap hiddenCamera">
+      <video id="video" playsinline autoplay></video>
+      </div>
+      <!—Botón de captura -->
+      <div class="controller hiddenCamera">
+      <button id="snap">Capture</button>
+      </div>
+     
 
-            <label for="github">Github</label>
-            <input placeholder="Ej: @sally-hill" id="github" class="input_icon" type="text" name="github" required/>
-        </form>
-    </div>
+      <label for="email">Email</label>
+      <input placeholder="Ej: sally-hill@gmail.com" id="email" class="input_icon" type="email" name="email" required />
+
+      <label for="phone">Teléfono</label>
+      <input placeholder="Ej: 555-55-55-55" id="phone" class="input_icon" type="tel" name="phone" />
+
+      <label for="linkedin">Linkedin</label>
+      <input placeholder="Ej: linkedin.com/in/sally.hill" id="linkedin" class="input_icon" type="text" name="linkedin"
+        required />
+
+      <label for="github">Github</label>
+      <input placeholder="Ej: @sally-hill" id="github" class="input_icon" type="text" name="github" required />
+    </form>
+  </div>
 </div>
