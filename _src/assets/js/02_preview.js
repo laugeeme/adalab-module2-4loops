@@ -1,4 +1,4 @@
-'user strict'
+'use strict'
 
 //Función para mostrar los iconos de inputs con contenido
 
@@ -61,7 +61,6 @@ emailInput.addEventListener('keyup', showEmailIcon);
 phoneInput.addEventListener('keyup', showPhoneIcon);
 linkedinInput.addEventListener('keyup', showLinkedinIcon);
 githubInput.addEventListener('keyup', showGithubIcon);
-
 
 //// Función para que los iconos desaparezcan si no se rellenan antes de compartir
 
