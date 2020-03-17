@@ -16,11 +16,10 @@ const inputPhone = document.querySelector('#phone');
 const inputLinkedin = document.querySelector('#linkedin');
 const inputGithub = document.querySelector('#github');
 
-//Constantes para guardar y reutilizar la información del usuario
 const userInfo = {}
 
 
-//Función para paleta de colores
+//FUNCIÓN PARA PALETA DE COLORES
 function saveSelectedTheme(event) { //para guardar la paleta
   localStorage.setItem('theme', event.currentTarget.id);
 }
@@ -63,7 +62,7 @@ function printSavedTheme() { //para aplicar los estilos de la paleta
 }
 
 
-//Función para formulario
+//FUNCIÓN PARA FORMULARIO
 function saveUserInfo(event) { //para guardar la información en un objeto
   const inputName = event.currentTarget.name;
   const inputValue = event.currentTarget.value;
@@ -73,11 +72,11 @@ function saveUserInfo(event) { //para guardar la información en un objeto
   setLocalUserInfo();
 }
 
-function setLocalUserInfo() { // para guardar la información en el navegador
+function setLocalUserInfo() { // para guardar la información en local
   localStorage.setItem('userInfo', JSON.stringify(userInfo))
 }
 
-function readUserInfo() { //para recuperar la información del navegador
+function readUserInfo() { //para recuperar la información local
   let savedUserInfo = JSON.parse(localStorage.getItem('userInfo'))
   return savedUserInfo;
 }
@@ -120,6 +119,41 @@ function printInfoToCard() {//para pintar la info en la tarjeta
 
 }
 
+
+//FUNCIÓN PARA LA IMAGEN
+function setProfileImage() {//para guardar imagen en local
+  let imageUrl = profileImage.style.backgroundImage;
+
+  localStorage.setItem('image', imageUrl);
+}
+
+function readLocalImage() {// para recuperar imagen en local
+  const localImage = localStorage.getItem('image');
+  return localImage
+}
+
+function printSavedImage() {// para pintar la imagen guardada
+  const savedImage = readLocalImage();
+  
+  profileImage.style.backgroundImage = savedImage;
+  profilePreview.style.backgroundImage = savedImage;
+}
+
+
+
+//FUNCIÓN PARA BORRAR TODOS LOS DATOS LOCALES CON EL BOTÓN RESET
+
+function removeLocalInfo() {
+  localStorage.removeItem('userInfo');
+  localStorage.removeItem('theme');
+  localStorage.removeItem('image');
+
+  profileImage.style.backgroundImage = 'url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e8afef60261411.5a44784a9dcc3.gif)';
+  profilePreview.style.backgroundImage = 'url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e8afef60261411.5a44784a9dcc3.gif)';
+}
+
+// resetButton.addEventListener('click', removeLocalInfo);
+
 //Listeners para guardar configuración de color
 optionDesignPalette1.addEventListener('click', saveSelectedTheme);
 optionDesignPalette2.addEventListener('click', saveSelectedTheme);
@@ -134,6 +168,7 @@ inputPhone.addEventListener('keyup', saveUserInfo);
 inputLinkedin.addEventListener('keyup', saveUserInfo);
 inputGithub.addEventListener('keyup', saveUserInfo);
 
-//Listeners para actualizar la información guardada
+//Listeners para actualizar/borrar la información guardada
 window.addEventListener('load', checkSavedTheme);
 window.addEventListener('load', printSavedInfo);
+window.addEventListener('load', printSavedImage);
