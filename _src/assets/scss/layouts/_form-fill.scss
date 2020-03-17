@@ -43,6 +43,9 @@
             padding-bottom: 7px;
             color: #114e4e;
         }
+        .required {
+            color: $colorIcons;
+        }
         input {
             box-sizing: border-box;
             display: block;
@@ -54,11 +57,16 @@
             color: black;
             margin-bottom: 20px;
         }
+
+        .hidden-field {
+            display: none;
+        }
+        
         button {
             width: 140px;
             height: 30px;
             border-radius: 3px;
-            background-color:#e17334;
+            background-color:$colorIcons;
             color: white;
             margin-bottom: 20px;
             border-color: transparent;
@@ -70,6 +78,13 @@
             display: inline-block;
             margin-left: 20px;
             border: 1px solid #a2deaf;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e8afef60261411.5a44784a9dcc3.gif);
+            position: relative;
+            top: 9.6px;
+            right:  9px;
         }
     }
 

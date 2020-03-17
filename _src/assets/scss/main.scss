@@ -2,11 +2,15 @@
 @import 'utils/variables';
 @import 'utils/tipography';
 @import 'utils/mixins';
+@import 'utils/buttons';
 @import 'base/structure';
 @import 'layouts/landing';
 @import 'layouts/header';
+@import "layouts/loop";
 @import 'layouts/preview';
 @import 'layouts/form-design';
 @import 'layouts/form-fill';
+@import 'layouts/camera-button';
 @import 'layouts/form-share';
 @import 'layouts/footer';
+@import 'base/redesign';
