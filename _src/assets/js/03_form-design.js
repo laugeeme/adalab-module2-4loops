@@ -1,6 +1,5 @@
 'use strict';
 
-console.log('hola design');
 
 const palette1 = document.querySelector('#colorPalette1');
 const palette2 = document.querySelector('#colorPalette2');

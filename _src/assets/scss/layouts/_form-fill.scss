@@ -43,6 +43,9 @@
             padding-bottom: 7px;
             color: #114e4e;
         }
+        .required {
+            color: $colorIcons;
+        }
         input {
             box-sizing: border-box;
             display: block;
@@ -54,6 +57,11 @@
             color: black;
             margin-bottom: 20px;
         }
+
+        .hidden-field {
+            display: none;
+        }
+        
         button {
             width: 140px;
             height: 30px;
@@ -70,6 +78,9 @@
             display: inline-block;
             margin-left: 20px;
             border: 1px solid #a2deaf;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
     }
 
