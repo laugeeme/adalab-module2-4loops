@@ -13,7 +13,7 @@ const linkedinInput = document.querySelector('#linkedin');
 const githubInput = document.querySelector('#github');
 
 
-function showEmailIcon () {
+function showEmailIcon() {
     if (emailInput.value === '') {
         cardIconMail.classList.add('opacity');
     }
@@ -24,7 +24,7 @@ function showEmailIcon () {
     }
 }
 
-function showPhoneIcon () {
+function showPhoneIcon() {
     if (phoneInput.value === '') {
         cardIconPhone.classList.add('opacity');
     }
@@ -35,7 +35,7 @@ function showPhoneIcon () {
     }
 }
 
-function showLinkedinIcon () {
+function showLinkedinIcon() {
     if (linkedinInput.value === '') {
         cardIconLinkedin.classList.add('opacity');
     }
@@ -46,7 +46,7 @@ function showLinkedinIcon () {
     }
 }
 
-function showGithubIcon () {
+function showGithubIcon() {
     if (githubInput.value === '') {
         cardIconGithub.classList.add('opacity');
     }
@@ -64,9 +64,9 @@ githubInput.addEventListener('keyup', showGithubIcon);
 
 //// Función para que los iconos desaparezcan si no se rellenan antes de compartir
 
-const ButtonShare = document.querySelector ('.btn-share');
+const ButtonShare = document.querySelector('.btn-share');
 
-function hideIcons () {
+function hideIcons() {
     if (emailInput.value === '') {
         cardIconMail.classList.add('hidden-icons');
     }
@@ -75,10 +75,10 @@ function hideIcons () {
     }
     if (linkedinInput.value === '') {
         cardIconLinkedin.classList.add('hidden-icons');
-    } 
+    }
     if (githubInput.value === '') {
         cardIconGithub.classList.add('hidden-icons');
-    } 
+    }
 }
 
 ButtonShare.addEventListener('click', hideIcons)
