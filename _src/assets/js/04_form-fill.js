@@ -1,5 +1,4 @@
-// 'use strict';
-// console.log('hola');
+'use strict';
 // form-fill constants
 const fullName = document.querySelector('#name');
 const jobPosition = document.querySelector('#job');
