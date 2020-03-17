@@ -116,7 +116,6 @@ function printInfoToCard() {//para pintar la info en la tarjeta
   showPhoneIcon()
   showLinkedinIcon()
   showGithubIcon()
-
 }
 
 
@@ -140,7 +139,6 @@ function printSavedImage() {// para pintar la imagen guardada
 }
 
 
-
 //FUNCIÓN PARA BORRAR TODOS LOS DATOS LOCALES CON EL BOTÓN RESET
 
 function removeLocalInfo() {
@@ -152,7 +150,6 @@ function removeLocalInfo() {
   profilePreview.style.backgroundImage = 'url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e8afef60261411.5a44784a9dcc3.gif)';
 }
 
-// resetButton.addEventListener('click', removeLocalInfo);
 
 //Listeners para guardar configuración de color
 optionDesignPalette1.addEventListener('click', saveSelectedTheme);
