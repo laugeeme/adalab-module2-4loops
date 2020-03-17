@@ -32,3 +32,4 @@ for (i2 = 0; i2 < coll2.length; i2++) {
   });
 }
 
+const TwitterButton = document.querySelector('.btn-twit');
