@@ -9,11 +9,11 @@ function resetForm() {
   removeCanvas();
   hiddeCamera();
   removeLocalInfo();
+  removePic();
 }
 
 function resetPreview() {
   // Esta función reseteará el style de colores, el nombre y puesto y los iconos.
-
   previewPalette1();
   showEmailIcon();
   showPhoneIcon();
@@ -29,5 +29,9 @@ function removeCanvas() {
   canvas.classList.remove('showCanvas');
 }
 
-// resetButton.addEventListener('click', resetForm());
+function removePic() {
+  profileImage.style.backgroundImage = `url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e8afef60261411.5a44784a9dcc3.gif)`;
+}
+
 resetButton.addEventListener('click', resetForm);
+

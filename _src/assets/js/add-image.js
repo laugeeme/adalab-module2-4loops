@@ -6,10 +6,10 @@ const fileField = document.querySelector('#img-selector');
 const profileImage = document.querySelector('.preview__card--picture');
 const profilePreview = document.querySelector('.empty-box');
 
-function getImage(event){
-    let myFile = event.currentTarget.files[0];
-    fr.addEventListener('load', addImage);
-    fr.readAsDataURL(myFile);
+function getImage(event) {
+  let myFile = event.currentTarget.files[0];
+  fr.addEventListener('load', addImage);
+  fr.readAsDataURL(myFile);
 }
  function addImage() {
     profileImage.style.backgroundImage = `url(${fr.result})`;
@@ -19,7 +19,7 @@ function getImage(event){
 }
 
 function generateClick() {
-    fileField.click(); 
+  fileField.click();
 }
 
 uploadButton.addEventListener('click', generateClick);
