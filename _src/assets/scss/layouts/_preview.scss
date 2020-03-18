@@ -41,14 +41,14 @@
     color: white;
     outline: none;
 
-    &:hover, &:focus {
-      background-color: #c1453a;
-      transition: background-color 0.5s;
-    }
+    // &:hover, &:focus {
+    //   background-color: #c1453a;
+    //   transition: background-color 0.5s;
+    // }
 
-    &:active {
-      opacity: 0.6;
-    }
+    // &:active {
+    //   opacity: 0.6;
+    // }
 
     i {
       padding-right: 6px;
@@ -109,7 +109,7 @@
 
   @include forTablet {
     width: 50vw;
-    height: 100vh;
+    height: 768px;
   }
 
   @include forPc {
