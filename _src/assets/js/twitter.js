@@ -40,6 +40,7 @@ function showURL(result){ //pintamos la url en la web
     errorMessage.classList.remove('display__none'); //quitamos clase "display__none" al mensaje de error
     }else{
     successMessage.classList.remove('display__none'); //quitamos clase "display__none" al mensaje de éxito
+    twitterCardButton.classList.remove('display__none') //quitamos clase "display__none" al botón de Twitter para compartir
     printURL.innerHTML = result.cardURL; //pintamos la url en pantalla
     printURL.href = result.cardURL; //añadimos la url al href del enlace
     }
