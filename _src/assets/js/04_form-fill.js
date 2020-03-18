@@ -20,7 +20,7 @@ jobPosition.addEventListener('keyup', copyInfoJob);
 
 // activar/desactivar botón Twitter
 
-const twitterButton = document.querySelector('.btn-twit');
+/* const twitterButton = document.querySelector('.btn-twit');
 
 function desactivateButton(event) {
   if (fullName.value === '' || jobPosition.value === '' || emailAddress.value === '' || linkedin === '' || github === '') {
@@ -32,4 +32,4 @@ function desactivateButton(event) {
 }
 
 
-twitterButton.addEventListener('click', desactivateButton);
+twitterButton.addEventListener('click', desactivateButton); */

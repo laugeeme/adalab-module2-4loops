@@ -1,4 +1,4 @@
-'user strict';
+'use strict';
 
 let coll = document.getElementsByClassName('panel__coll');
 let i;
@@ -35,65 +35,83 @@ for (i2 = 0; i2 < coll2.length; i2++) {
 
 // Desactiva el botón de crear tarjeta en caso de que el formulario no esté completo.
 
-function checkFilledInputs() {
-  
-  if (fullName.value === '' || jobPosition.value === '' || emailAddress.value === '' || linkedin.value === '' || github.value === '') {
-    createCardButton.disabled = true;
-    errorMessage.classList.remove('hidden');
+const createCardButton = document.querySelector('.btn-create');
+const errorMessage = document.querySelector('.error-message');
 
-  } else {
+//---->MARIA
+const allFormInputs = document.querySelectorAll('.input-required');
+
+function addListenersToInputs(){
+  for(let singleInput of allFormInputs){
+    singleInput.addEventListener('keyup',validateFields);
+  }
+
+  //allFormInputs.forEach(singleInput => singleInput.addEventListener('keyup',validateFields))
+
+}
+
+function validateFields(evt){
+  if(evt.currentTarget.id === 'name' && evt.currentTarget.value !== ''){
     createCardButton.disabled = false;
     errorMessage.classList.add('hidden');
-  }
-}
-
-/* var submitButton = document.querySelector('#createCardButton');
-var responseURL = document.querySelector('.response');
-var form = document.querySelector('form');
-var fr = new FileReader();
-
-submitButton.addEventListener('click', loadPhoto);
-
-function sendData () {
-  
-  var inputs = Array.from(form.elements);
-  var json = getJSONFromInputs(inputs);
-  json.skills = ['JavaScript', 'React'];
-  json.photo = fr.result;
-  sendRequest(json);
-}
-
-function loadPhoto(){
-  var myFile = document.querySelector('#img-selector').files[0];
-  fr.addEventListener('load', sendData);
-  fr.readAsDataURL(myFile);
-}
-
-function getJSONFromInputs(inputs){
-  return inputs.reduce(function (acc, val) {
-    if(val.nodeName !== 'BUTTON')
-      acc[val.name] = val.value;
-    return acc;
-  }, {})
-}
-
-function sendRequest(json){
-  fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
-    method: 'POST',
-    body: JSON.stringify(json),
-    headers: {
-      'content-type': 'application/json'
-    },
-  })
-    .then(function(resp) { return resp.json(); })
-    .then(function(result) { showURL(result); })
-    .catch(function(error) { console.log(error); });
-}
-
-function showURL(result){
-  if(result.success){
-    responseURL.innerHTML = '<a href=' + result.cardURL + '>' + result.cardURL + '</a>';
   }else{
-    responseURL.innerHTML = 'ERROR:' + result.error;
+    createCardButton.disabled = true;
+    errorMessage.classList.remove('hidden');
   }
-} */
+  if(evt.currentTarget.id === 'job' && evt.currentTarget.value !== ''){
+    createCardButton.disabled = false;
+    errorMessage.classList.add('hidden');
+  }else{
+    createCardButton.disabled = true;
+    errorMessage.classList.remove('hidden');
+  }
+  if(evt.currentTarget.id === 'email' && evt.currentTarget.value !== ''){
+    createCardButton.disabled = false;
+    errorMessage.classList.add('hidden');
+  }else{
+    createCardButton.disabled = true;
+    errorMessage.classList.remove('hidden');
+  }
+
+  if(evt.currentTarget.id === 'linkedin' && evt.currentTarget.value !== ''){
+    createCardButton.disabled = false;
+    errorMessage.classList.add('hidden');
+  }else{
+    createCardButton.disabled = true;
+    errorMessage.classList.remove('hidden');
+  }
+  if(evt.currentTarget.id === 'github' && evt.currentTarget.value !== ''){
+    createCardButton.disabled = false;
+    errorMessage.classList.add('hidden');
+  }else{
+    createCardButton.disabled = true;
+    errorMessage.classList.remove('hidden');
+  }
+}
+
+
+// fullName.addEventListener('keyup',validateFields);
+
+
+
+
+
+
+
+
+///
+
+
+// function checkFilledInputs() {
+//   console.log('holas')
+//   if (fullName.value === '' || jobPosition.value === '' || emailAddress.value === '' || linkedin.value === '' || github.value === '') {
+//     createCardButton.disabled = true;
+//     errorMessage.classList.remove('hidden');
+
+//   } else {
+//     createCardButton.disabled = false;
+//     errorMessage.classList.add('hidden');
+//   }
+// }
+
+// createCardButton.addEventListener('click', checkFilledInputs);
