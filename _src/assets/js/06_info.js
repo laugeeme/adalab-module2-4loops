@@ -94,7 +94,7 @@ function printSavedInfo() { //para añadir la información al formulario
     }
 
   }
-
+  
   printInfoToCard()
 }
 

@@ -1,12 +1,14 @@
 
   <button type="button" class="panel__coll btn-share"><i class="fas fa-share-alt"></i>Comparte</button>
   <div class="panel__content display__none">
-    <button type="button" class="panel__coll--child btn-create button__hover--styles"><i class="far fa-address-card"></i>Crear
-      tarjeta</button>
-    <div class="panel__content2 display__none">
-      <p>La tarjeta ha sido creada:</p>
 
-      <button type="button" class="btn-twit button__hover--styles"><i class="fab fa-twitter"></i>Compartir en Twitter</button>
+    <button type="button" class="panel__coll--child btn-create button__hover--styles" id="createCardButton"><i class="far fa-address-card"></i>Crear tarjeta</button>
+      <span id="error-message" class="error-message errorEmail display__none">*Faltan campos por completar*</span>
+    <div class="panel__content2 display__none">
+      <p id="success-message" class="success-message display__none">La tarjeta ha sido creada:</p>
+      <a class="print__url--twitter" href=''></a>
+
+      <a type="button" class="btn-twit button__hover--styles" target="local"><i class="fab fa-twitter" href=""></i>Compartir en Twitter</a>
     </div>
     <!-- <div class="btn-create"><i class="far fa-address-card"></i><a href="#">Crear tarjeta</a></div> -->
   </div>
