@@ -1,6 +1,6 @@
 'use strict';
 
-const cardButton = document.querySelector('.btn-create'); //botón crear tarjeta como istener para generar el link
+const cardButton = document.querySelector('.btn-create'); //botón crear tarjeta como listener para generar el link
 const twitterCardButton = document.querySelector('.btn-twit'); //botón enviar Twitter como listener para generar tweet
 const printURL = document.querySelector('.print__url--twitter'); //elemento html donde se mostrará la url que se genere (creo otra etiqueta p para meterlo con esa clase)
 const userForm = document.querySelector('.fill'); //formulario con la información que se va a enviar
@@ -35,14 +35,6 @@ function sendRequest(){ //función para enviar la información de la tarjeta a l
 }
 
 function showURL(result){ //pintamos la url en la web
-//   if(result.success){ //si el resultado es "success"
-//     successMessage.classList.remove('display__none');
-//     printURL.innerHTML = result.cardURL ;
-//     printURL.href = result.cardURL;
-//   }else{
-//     // printURL.innerHTML = 'ERROR:' + result.error;
-//     errorMessage.classList.remove('display__none');
-//   }
 
     if(result.error){ //si el resultado es "success"
     errorMessage.classList.remove('display__none'); //quitamos clase "display__none" al mensaje de error
@@ -51,15 +43,11 @@ function showURL(result){ //pintamos la url en la web
     printURL.innerHTML = result.cardURL; //pintamos la url en pantalla
     printURL.href = result.cardURL; //añadimos la url al href del enlace
     }
-
-
-    // return result.cardURL
 }
 
-function twitterLink() {
-    const url = document.querySelector('.print__url--twitter').href;
-    console.log(url)
-    twitterCardButton.href = `https://twitter.com/intent/tweet?text=He%20creado%20esta%20tarjeta%20con%20Awesome%20Profile%20Cards:%0A;hashtags=Adalab, AwesomeProfileCards, promoIdelisa ${url}`;
+function twitterLink() { //función para crear generar el tweet en twitter con el texto y hashtags
+    const url = document.querySelector('.print__url--twitter').href; //cogemos la url que hemos añadido después de generarse
+    twitterCardButton.href = `https://twitter.com/intent/tweet?text=He%20creado%20esta%20tarjeta%20con%20Awesome%20Profile%20Cards:%0A;hashtags=Adalab, AwesomeProfileCards, promoIdelisa ${url}`; //incluimos la url nueva para el tweet de tweeter como href del botón "compartir en Twitter" (cambio button por a porque con button no me funciona)
 }
 
 cardButton.addEventListener('click', createInfoObject); //listener para crear tarjeta
