@@ -32,3 +32,17 @@ for (i2 = 0; i2 < coll2.length; i2++) {
   });
 }
 
+
+// Desactiva el botón de crear tarjeta en caso de que el formulario no esté completo.
+
+function checkFilledInputs() {
+  
+  if (fullName.value === '' || jobPosition.value === '' || emailAddress.value === '' || linkedin.value === '' || github.value === '') {
+    createCardButton.disabled = true;
+    errorMessage.classList.remove('hidden');
+
+  } else {
+    createCardButton.disabled = false;
+    errorMessage.classList.add('hidden');
+  }
+}
