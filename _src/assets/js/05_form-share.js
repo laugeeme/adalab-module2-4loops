@@ -3,7 +3,7 @@
 let coll = document.getElementsByClassName('panel__coll');
 let i;
 for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener('click', function() {
+  coll[i].addEventListener('click', function () {
     this.classList.toggle('active');
     let panel__content = this.nextElementSibling;
     if (panel__content.style.display === 'inherit') {
@@ -21,7 +21,7 @@ for (i = 0; i < coll.length; i++) {
 let coll2 = document.getElementsByClassName('panel__coll--child');
 let i2;
 for (i2 = 0; i2 < coll2.length; i2++) {
-  coll2[i2].addEventListener('click', function() {
+  coll2[i2].addEventListener('click', function () {
     this.classList.toggle('active2');
     let panel__content2 = this.nextElementSibling;
     if (panel__content2.style.display === 'inherit') {
@@ -37,60 +37,64 @@ for (i2 = 0; i2 < coll2.length; i2++) {
 
 const createCardButton = document.querySelector('.btn-create');
 const errorMessage = document.querySelector('.error-message');
-
+const twitterButtonContainer = document.querySelector('.panel__content2')
 //---->MARIA
 const allFormInputs = document.querySelectorAll('.input-required');
 
-function addListenersToInputs(){
-  for(let singleInput of allFormInputs){
-    singleInput.addEventListener('keyup',validateFields);
+function addListenersToInputs() {
+  for (let singleInput of allFormInputs) {
+    singleInput.addEventListener('keyup', validateFields);
   }
 
   //allFormInputs.forEach(singleInput => singleInput.addEventListener('keyup',validateFields))
 
 }
 
-function validateFields(evt){
-  if(evt.currentTarget.id === 'name' && evt.currentTarget.value !== ''){
+function validateFields(evt) {
+  if (evt.currentTarget.id === 'name' && evt.currentTarget.value !== '') {
     createCardButton.disabled = false;
     errorMessage.classList.add('hidden');
-  }else{
+  } else {
     createCardButton.disabled = true;
     errorMessage.classList.remove('hidden');
   }
-  if(evt.currentTarget.id === 'job' && evt.currentTarget.value !== ''){
+  if (evt.currentTarget.id === 'job' && evt.currentTarget.value !== '') {
     createCardButton.disabled = false;
     errorMessage.classList.add('hidden');
-  }else{
+  } else {
     createCardButton.disabled = true;
     errorMessage.classList.remove('hidden');
   }
-  if(evt.currentTarget.id === 'email' && evt.currentTarget.value !== ''){
+  if (evt.currentTarget.id === 'email' && evt.currentTarget.value !== '') {
     createCardButton.disabled = false;
     errorMessage.classList.add('hidden');
-  }else{
+  } else {
     createCardButton.disabled = true;
     errorMessage.classList.remove('hidden');
   }
 
-  if(evt.currentTarget.id === 'linkedin' && evt.currentTarget.value !== ''){
+  if (evt.currentTarget.id === 'linkedin' && evt.currentTarget.value !== '') {
     createCardButton.disabled = false;
     errorMessage.classList.add('hidden');
-  }else{
+  } else {
     createCardButton.disabled = true;
     errorMessage.classList.remove('hidden');
   }
-  if(evt.currentTarget.id === 'github' && evt.currentTarget.value !== ''){
+  if (evt.currentTarget.id === 'github' && evt.currentTarget.value !== '') {
     createCardButton.disabled = false;
     errorMessage.classList.add('hidden');
-  }else{
+  } else {
     createCardButton.disabled = true;
     errorMessage.classList.remove('hidden');
   }
 }
 
 
-// fullName.addEventListener('keyup',validateFields);
+fullName.addEventListener('keyup',validateFields);
+jobPosition.addEventListener('keyup',validateFields);
+emailAddress.addEventListener('keyup',validateFields);
+linkedin.addEventListener('keyup',validateFields);
+github.addEventListener('keyup',validateFields);
 
 
 
