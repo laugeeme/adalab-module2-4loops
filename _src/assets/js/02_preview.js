@@ -90,10 +90,16 @@ const formsBox = document.querySelector('.panel');
 function changePreviewHeight() {
   const formsBoxHeight = parseInt(formsBox.clientHeight);
   const minHeight = 768;
-  if (formsBoxHeight < minHeight) {
+  if (window.innerWidth <= minHeight) {
+    previewBackground.style.height = '540px';
+  } else if (formsBoxHeight < minHeight) {
     previewBackground.style.height = `${minHeight}px`;
   } else {
     previewBackground.style.height = `${formsBoxHeight}px`;
+  }
+
+  if (window.innerWidth <= minHeight && window.innerHeight <= minHeight) {
+    previewBackground.style.paddingTop = '38px';
   }
 
   console.log('main', formsBoxHeight);
@@ -102,3 +108,4 @@ function changePreviewHeight() {
 
 
 formsBox.addEventListener('click', changePreviewHeight);
+window.addEventListener('resize', changePreviewHeight);

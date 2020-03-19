@@ -27,6 +27,8 @@
   padding-top: 38px;
   display: flex;
   justify-content: center;
+  border-radius: 6px;
+  height: 540px;
 
   .button_reset {
     // margin-left: 20px;
@@ -40,7 +42,7 @@
     font-size: 12px;
     color: white;
     outline: none;
-    
+
     i {
       padding-right: 6px;
     }
