@@ -24,7 +24,7 @@
 
 .page__preview {
   // background: linear-gradient(#bfcdd0, #dde9ed);
-  padding: 10% 15%;
+  padding-top: 38px;
   display: flex;
   justify-content: center;
 
@@ -40,16 +40,7 @@
     font-size: 12px;
     color: white;
     outline: none;
-
-    // &:hover, &:focus {
-    //   background-color: #c1453a;
-    //   transition: background-color 0.5s;
-    // }
-
-    // &:active {
-    //   opacity: 0.6;
-    // }
-
+    
     i {
       padding-right: 6px;
     }
@@ -92,6 +83,7 @@
     .preview__card--links {
       // padding: 10px 0 0 15px;
       text-align: center;
+      padding-top: 8px;;
 
       .preview__card--icon {
         // display: inline-block;
@@ -110,6 +102,7 @@
   @include forTablet {
     width: 50vw;
     height: 768px;
+    padding-top: 173px;
   }
 
   @include forPc {

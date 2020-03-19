@@ -100,4 +100,5 @@ function changePreviewHeight() {
   console.log('preview', previewBackground.style.height);
 }
 
+
 formsBox.addEventListener('click', changePreviewHeight);
