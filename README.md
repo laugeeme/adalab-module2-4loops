@@ -1,4 +1,5 @@
-<img src="public/apc-favicon.png" alt="APC" width=80 align=right></img>
+<img src="https://i.ibb.co/R3GtYVs/apc-favicon.png" alt="APC" width=80 align=right></img>
+
 
 
 # AWESOME PROFILE CARDS
@@ -9,7 +10,7 @@ El ejercicio consiste en desarrollar una aplicación web de creación personaliz
 
 >## ¿ Quienes somos ? :
 
-<img src="public/assets/images/4LoopsLogo.png" alt="APC" width=200 align=center></img>
+<img src="https://i.ibb.co/3B4d1J3/4-Loops-Logo.png" alt="APC" width=200 align=center></img>
 
 4Loops! lo componemos :
 
