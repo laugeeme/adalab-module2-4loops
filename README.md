@@ -2,13 +2,13 @@
 
 
 
-# AWESOME PROFILE CARDS
+># AWESOME PROFILE CARDS
   
->### Proyecto fin de módulo 2 |  Equipo 4Loops!  :rocket:
+## Proyecto fin de módulo 2 |  Equipo 4Loops!  :rocket:
 
 El ejercicio consiste en desarrollar una aplicación web de creación personalizada de tarjetas virtuales que se pueden compartir en [Twitter](www.twitter.com) .
 
->## ¿ Quienes somos ? :
+## ¿ Quienes somos ? :
 
 <img src="https://i.ibb.co/3B4d1J3/4-Loops-Logo.png" alt="APC" width=200 align=center></img>
 
@@ -19,7 +19,8 @@ El ejercicio consiste en desarrollar una aplicación web de creación personaliz
 * [María](https://github.com/mgarvia)
 * [Romi](https://github.com/rpaz-code)
 
->## Herramientas utilizadas :wrench:
+  
+## Herramientas utilizadas :wrench:
 
 Para el desarrollo de este ejercicio hemos utilizado la siguiente [API](https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/) que nos permite crear las tarjetas virtuales.
 
@@ -32,7 +33,7 @@ La web está basada en los siguientes lenguajes de programación:
 
 
  
- >## Estructura del proyecto  :house:
+ ## Estructura del proyecto  :house:
 
 La estructura de carpetas es la siguiente:
 
@@ -89,7 +90,7 @@ La estructura de carpetas es la siguiente:
    
 ```
 
->## Uso :clipboard:
+## Uso :clipboard:
 1. Clona o descarga el repositorio en tu local.
 2. Instala [Node.js](https://nodejs.org/es/) con npm install sino lo tienes ya.
 3. Arranca el kit con [Gulp](https://gulpjs.com/).
