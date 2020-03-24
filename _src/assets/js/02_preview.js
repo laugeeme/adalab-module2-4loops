@@ -102,8 +102,8 @@ function changePreviewHeight() {
     previewBackground.style.paddingTop = '38px';
   }
 
-  console.log('main', formsBoxHeight);
-  console.log('preview', previewBackground.style.height);
+  // console.log('main', formsBoxHeight);
+  // console.log('preview', previewBackground.style.height);
 }
 
 
