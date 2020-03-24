@@ -21,11 +21,11 @@ const userInfo = {}
 
 //FUNCIÓN PARA PALETA DE COLORES
 function saveSelectedTheme(event) { //para guardar la paleta
-  localStorage.setItem('theme', event.currentTarget.id);
+  localStorage.setItem('palette', event.currentTarget.value);
 }
 
 function readSavedTheme() { //para leer la paleta guardada
-  const currentTheme = localStorage.getItem('theme');
+  const currentTheme = localStorage.getItem('palette');
   return currentTheme;
 }
 
@@ -34,7 +34,7 @@ function checkSavedTheme() { //para sleccionar la paleta guardada
   const inputPaletteArray = document.querySelectorAll('.input-palette');
 
   for (let input of inputPaletteArray) {
-    if (input.id === savedTheme) {
+    if (input.value === savedTheme) {
       input.setAttribute('checked', true);
     }
   }
@@ -121,6 +121,7 @@ function printInfoToCard() {//para pintar la info en la tarjeta
 
 //FUNCIÓN PARA LA IMAGEN
 function setProfileImage() {//para guardar imagen en local
+  profileImage.style.backgroundImage = `url(${fr.result})`;
   let imageUrl = profileImage.style.backgroundImage;
 
   localStorage.setItem('image', imageUrl);
