@@ -41,61 +41,78 @@ const twitterButtonContainer = document.querySelector('.panel__content2')
 //---->MARIA
 const allFormInputs = document.querySelectorAll('.input-required');
 
-function addListenersToInputs() {
-  for (let singleInput of allFormInputs) {
-    singleInput.addEventListener('keyup', validateFields);
-  }
+// function addListenersToInputs() {
+//   for (let singleInput of allFormInputs) {
+//     singleInput.addEventListener('keyup', validateFields);
+  // }
 
   //allFormInputs.forEach(singleInput => singleInput.addEventListener('keyup',validateFields))
+// }
 
-}
+// function validateFields(evt) {
+//   if (evt.currentTarget.id === 'name' && evt.currentTarget.value !== '') {
+//     createCardButton.disabled = false;
+//     errorMessage.classList.add('hidden');
+//   } else {
+//     createCardButton.disabled = true;
+//     errorMessage.classList.remove('hidden');
+//   }
+//   if (evt.currentTarget.id === 'job' && evt.currentTarget.value !== '') {
+//     createCardButton.disabled = false;
+//     errorMessage.classList.add('hidden');
+//   } else {
+//     createCardButton.disabled = true;
+//     errorMessage.classList.remove('hidden');
+//   }
+//   if (evt.currentTarget.id === 'email' && evt.currentTarget.value !== '') {
+//     createCardButton.disabled = false;
+//     errorMessage.classList.add('hidden');
+//   } else {
+//     createCardButton.disabled = true;
+//     errorMessage.classList.remove('hidden');
+//   }
+
+//   if (evt.currentTarget.id === 'linkedin' && evt.currentTarget.value !== '') {
+//     createCardButton.disabled = false;
+//     errorMessage.classList.add('hidden');
+//   } else {
+//     createCardButton.disabled = true;
+//     errorMessage.classList.remove('hidden');
+//   }
+//   if (evt.currentTarget.id === 'github' && evt.currentTarget.value !== '') {
+//     createCardButton.disabled = false;
+//     errorMessage.classList.add('hidden');
+//   } else {
+//     createCardButton.disabled = true;
+//     errorMessage.classList.remove('hidden');
+//   }
+// }
+
+
+// fullName.addEventListener('keyup',validateFields);
+// jobPosition.addEventListener('keyup',validateFields);
+// emailAddress.addEventListener('keyup',validateFields);
+// linkedin.addEventListener('keyup',validateFields);
+// github.addEventListener('keyup',validateFields);
+
 
 function validateFields(evt) {
-  if (evt.currentTarget.id === 'name' && evt.currentTarget.value !== '') {
-    createCardButton.disabled = false;
-    errorMessage.classList.add('hidden');
-  } else {
-    createCardButton.disabled = true;
-    errorMessage.classList.remove('hidden');
-  }
-  if (evt.currentTarget.id === 'job' && evt.currentTarget.value !== '') {
-    createCardButton.disabled = false;
-    errorMessage.classList.add('hidden');
-  } else {
-    createCardButton.disabled = true;
-    errorMessage.classList.remove('hidden');
-  }
-  if (evt.currentTarget.id === 'email' && evt.currentTarget.value !== '') {
-    createCardButton.disabled = false;
-    errorMessage.classList.add('hidden');
-  } else {
-    createCardButton.disabled = true;
-    errorMessage.classList.remove('hidden');
-  }
+  createCardButton.disabled = false;
+  errorMessage.classList.add('hidden');
 
-  if (evt.currentTarget.id === 'linkedin' && evt.currentTarget.value !== '') {
+  if (fullName.value === '' || jobPosition.value === '' || emailAddress.value === '' || linkedin.value === '' || github.value === '') {
+    event.preventDefault();
     createCardButton.disabled = false;
-    errorMessage.classList.add('hidden');
+    errorMessage.classList.remove('hidden')
   } else {
     createCardButton.disabled = true;
-    errorMessage.classList.remove('hidden');
-  }
-  if (evt.currentTarget.id === 'github' && evt.currentTarget.value !== '') {
-    createCardButton.disabled = false;
-    errorMessage.classList.add('hidden');
-  } else {
-    createCardButton.disabled = true;
-    errorMessage.classList.remove('hidden');
+    errorMessage.classList.add('hidden');  
   }
 }
 
+createCardButton.addEventListener('click', validateFields);
 
-fullName.addEventListener('keyup',validateFields);
-jobPosition.addEventListener('keyup',validateFields);
-emailAddress.addEventListener('keyup',validateFields);
-linkedin.addEventListener('keyup',validateFields);
-github.addEventListener('keyup',validateFields);
-
+window.addEventListener('load', validateFields);
 
 
 
