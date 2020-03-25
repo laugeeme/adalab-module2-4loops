@@ -18,6 +18,8 @@ const inputGithub = document.querySelector('#github');
 
 const userInfo = {};
 
+let userInfo = readUserInfo();
+
 //FUNCIÓN PARA PALETA DE COLORES
 function saveSelectedTheme(event) {
   //para guardar la paleta
