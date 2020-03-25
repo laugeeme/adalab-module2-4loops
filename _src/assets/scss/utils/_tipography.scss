@@ -25,28 +25,18 @@ $colorBackgroundImage: linear-gradient(to bottom, #f5f5f5, #ffffff 9%);
   font-family: $fontLandingTitle;
   font-size: 19.2px;
   color: $colorIcons;
-  // @include forTablet {
-  //     font-size: 24px;
-  // }
 }
 
 .font__subtitle {
   font-family: $fontBody;
   font-size: 12.8px;
   color: $colorLogo;
-  // @include forTablet {
-  //     font-size: 16px;
-  // }
 }
 
 .font__icons {
   font-family: $fontBody;
   font-size: 12.8px;
   color: $colorBody;
-
-  /*  @include forTablet {
-    font-size: 16px;
-    }  */
 }
 
 .font__footer {

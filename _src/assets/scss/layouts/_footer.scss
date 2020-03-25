@@ -1,25 +1,24 @@
 .page__footer {
-    display: flex;
-    flex-direction: column;;
-    justify-content: center;
-    align-items: center;
-    // height: 110px;
-    height: 15vh;
-    background-color: white;
-    .footer__logo--container {
-        height: 40px;
-        margin-top: 12px;
-        @include forTablet {
-            margin-top: 0px;
-        }
-        img {
-            height: 100%;
-        }
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+  background-color: white;
+  .footer__logo--container {
+    height: 40px;
+    margin-top: 12px;
     @include forTablet {
-        padding-left: 40px;
-        flex-direction: row;
-        justify-content: space-between;
-        height: 10vh;
+      margin-top: 0px;
     }
+    img {
+      height: 100%;
+    }
+  }
+  @include forTablet {
+    padding-left: 40px;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10vh;
+  }
 }

@@ -17,20 +17,15 @@
   }
 }
 
-
 .landing-logo {
   width: 250px;
   height: 63px;
-  
 
   @include forTablet {
     width: 419px;
     height: 105px;
-    
   }
 }
-
-
 
 .landing-text {
   h1 {
@@ -61,7 +56,7 @@
     letter-spacing: normal;
     text-align: center;
     padding-bottom: 17.8px;
-    width:264.8px;
+    width: 264.8px;
     @include text-capitalize;
 
     @include forTablet {
@@ -70,7 +65,6 @@
       height: 48px;
     }
   }
-
 }
 
 .landing-options {
@@ -93,7 +87,6 @@
     margin-top: 27px;
   }
 
-
   & .landing-options-icon {
     font-size: 22.4px;
     color: $colorIcons;
@@ -103,38 +96,35 @@
     letter-spacing: normal;
     text-align: center;
 
-    @include forTablet{
+    @include forTablet {
       font-size: 28px;
     }
   }
 
-
-
   & .landing-options-text {
     @include text-capitalize;
 
-    @include forTablet{
-      font-size:16px;
+    @include forTablet {
+      font-size: 16px;
     }
   }
 }
 
-
-  .landing-start {
-    text-decoration: none;
-    font-family: $fontBody;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 600;
-    font-stretch: normal;
-    font-style: normal;
-    letter-spacing: normal;
-    text-align: center;
-    @include text-uppercase;
-    height: 42px;
-    width: 129px;
-    background-color: #438792;
-    border-radius: 21px;
-    margin-top: 38.6px;
-    line-height: 42px;
-  }
+.landing-start {
+  text-decoration: none;
+  font-family: $fontBody;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  @include text-uppercase;
+  height: 42px;
+  width: 129px;
+  background-color: #438792;
+  border-radius: 21px;
+  margin-top: 38.6px;
+  line-height: 42px;
+}

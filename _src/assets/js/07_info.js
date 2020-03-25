@@ -50,18 +50,17 @@ function printSavedTheme() {
   const previewCardBox = document.querySelector('.preview__card--box');
 
   if (savedTheme === '1') {
-    previewPalette1()
+    previewPalette1();
   }
   if (savedTheme === '2') {
-    previewPalette2()
+    previewPalette2();
   }
   if (savedTheme === '3') {
-    previewPalette3()
+    previewPalette3();
   }
   if (savedTheme === '4') {
-    previewPalette4()
+    previewPalette4();
   }
-
 }
 
 //FUNCIÓN PARA FORMULARIO
@@ -140,9 +139,10 @@ function readLocalImage() {
   return localImage;
 }
 
-window.addEventListener('load', readLocalImage)
+window.addEventListener('load', readLocalImage);
 
-function printSavedImage() {// para pintar la imagen guardada
+function printSavedImage() {
+  // para pintar la imagen guardada
   const savedImage = readLocalImage();
 
   profileImage.style.backgroundImage = savedImage;

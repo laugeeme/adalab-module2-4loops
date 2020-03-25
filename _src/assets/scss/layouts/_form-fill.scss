@@ -1,101 +1,65 @@
-// .panel__content {
-
 .fill-form {
-    padding: 0 20px;
-    font-family: $mainFont;
-    // position: relative;
-    width: 100%;
-    
-    // h2 {
-    //     font-weight: bold;
-    //     text-transform: uppercase;
-    //     font-size: 18px;
-    //     color: #54585a;
-    //     border-top: 1px solid #d8d8d8;
-    //     padding-top: 10px;
-    //     padding-bottom: 25px;
-    // }
+  padding: 0 20px;
+  font-family: $mainFont;
+  width: 100%;
 
-    // i {
-    //     color: #e17334;
-    // }
+  .fill {
+    font-size: 14px;
 
-    // .updown {
-    //     height:18px;
-    //     width: 25px;
-    //     position: absolute;
-    //     top: 10px;
-    //     right: 20px;
-    //     background: transparent;
-    //     border-color: transparent;
-    //     outline: none;
-
-    //     img {
-    //         width: 100%;
-    //     }
-    // }
-
-    .fill {
-        font-size: 14px;
-
-        label {
-            display: block;
-            padding-bottom: 7px;
-            color: #114e4e;
-        }
-        .required {
-            color: $colorIcons;
-        }
-        input {
-            box-sizing: border-box;
-            display: block;
-            width: 100%;
-            height: 30px;
-            padding: 5px;
-            border: 1px solid #a2deaf;
-            // color: rgba(197, 197, 197, 0.3,);
-            color: black;
-            margin-bottom: 20px;
-        }
-
-        .hidden-field {
-            display: none;
-        }
-        
-        button {
-            width: 140px;
-            height: 30px;
-            border-radius: 3px;
-            background-color:$colorIcons;
-            color: white;
-            margin-bottom: 20px;
-            border-color: transparent;
-            outline: none;
-        }
-        .empty-box {
-            width:30px;
-            height: 30px;
-            display: inline-block;
-            margin-left: 20px;
-            margin-right: 20px;
-            border: 1px solid #a2deaf;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e8afef60261411.5a44784a9dcc3.gif);
-            position: relative;
-            top: 9.6px;
-            right:  9px;
-        }
+    label {
+      display: block;
+      padding-bottom: 7px;
+      color: #114e4e;
+    }
+    .required {
+      color: $colorIcons;
+    }
+    input {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      height: 30px;
+      padding: 5px;
+      border: 1px solid #a2deaf;
+      color: black;
+      margin-bottom: 20px;
     }
 
-    @include forTablet {
-        width: 44vw;
+    .hidden-field {
+      display: none;
     }
-    @include forPc {
-        width: 35vw;
+
+    button {
+      width: 140px;
+      height: 30px;
+      border-radius: 3px;
+      background-color: $colorIcons;
+      color: white;
+      margin-bottom: 20px;
+      border-color: transparent;
+      outline: none;
     }
+    .empty-box {
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      margin-left: 20px;
+      margin-right: 20px;
+      border: 1px solid #a2deaf;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e8afef60261411.5a44784a9dcc3.gif);
+      position: relative;
+      top: 9.6px;
+      right: 9px;
+    }
+  }
+
+  @include forTablet {
+    width: 44vw;
+  }
+  @include forPc {
+    width: 35vw;
+  }
 }
-// }
-
-

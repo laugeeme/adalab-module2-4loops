@@ -10,26 +10,11 @@ const github = document.querySelector('#github');
 const previewFullName = document.querySelector('.font__preview--title');
 const previewJobPosition = document.querySelector('.font__preview--subtitle');
 function copyInfoName(event) {
-    previewFullName.innerHTML = fullName.value || 'Nombre Apellido';
+  previewFullName.innerHTML = fullName.value || 'Nombre Apellido';
 }
 function copyInfoJob() {
-    previewJobPosition.innerHTML = jobPosition.value || 'Puesto';
+  previewJobPosition.innerHTML = jobPosition.value || 'Puesto';
 }
 fullName.addEventListener('keyup', copyInfoName);
 jobPosition.addEventListener('keyup', copyInfoJob);
 
-// activar/desactivar botón Twitter
-
-/* const twitterButton = document.querySelector('.btn-twit');
-
-function desactivateButton(event) {
-  if (fullName.value === '' || jobPosition.value === '' || emailAddress.value === '' || linkedin === '' || github === '') {
-    event.preventDefault();
-    alert('Upss!! Parece que no has rellenado los campos obligatorios.. ');
-  } else {
-      console.log('heyyy');
-  }
-}
-
-
-twitterButton.addEventListener('click', desactivateButton); */

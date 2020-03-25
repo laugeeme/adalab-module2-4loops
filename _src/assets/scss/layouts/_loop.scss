@@ -1,38 +1,29 @@
 $dash-array: 260;
 $stroke-width: 10;
-$anim-speed: 1500ms;
-$dark-theme: #1D1E22;
-$light-theme: #FFFFFF;
-$colors: #F38181, #FCE38A, #E23E57, #95E1D3, #FFC4D0, #00DFFC;
-
-
+$anim-speed: 2500ms;
+$dark-theme: #1d1e22;
+$light-theme: #ffffff;
+$colors: #f38181, #fce38a, #e23e57, #95e1d3, #ffc4d0, #00dffc;
 
 .page-content {
   display: flex;
-  // align-items: center;
-  justify-content: space-between; //antes center
-  // background-color: $light-theme;
+  justify-content: space-between;
   transition: background-color 200ms;
-  width: 89px; //antes 300px
+  width: 89px;
   position: absolute;
   right: 0px;
 }
 
-////////////Meto container para el loop
 .loop__container {
   position: absolute;
   left: 33px;
   top: -2px;
 }
-//////////////
 
 // Infinity elements
 .infinity {
-  // position: absolute;
-  // width: 50%;
-  // max-width: 800px;
   height: 24px;
-  
+
   path {
     fill: none;
     stroke-width: $stroke-width;
@@ -47,13 +38,13 @@ $colors: #F38181, #FCE38A, #E23E57, #95E1D3, #FFC4D0, #00DFFC;
 }
 
 .infinity__tracer {
-  stroke-linecap: round; 
+  stroke-linecap: round;
   opacity: 0.8;
   animation: tracer $anim-speed linear reverse infinite;
 
   @each $c in $colors {
     $i: index($colors, $c);
-    $s: ( $anim-speed / $i * length($colors));
+    $s: ($anim-speed / $i * length($colors));
     $d: (-$anim-speed / $i * length($colors) * 0.66);
 
     &--#{$i} {
@@ -77,7 +68,7 @@ $colors: #F38181, #FCE38A, #E23E57, #95E1D3, #FFC4D0, #00DFFC;
     stroke-dasharray: $dash-array / 6, $dash-array;
     stroke-dashoffset: -$dash-array * 0.3;
   }
-  65% { 
+  65% {
     transform: translateX(2px, -2px);
   }
   100% {
@@ -87,6 +78,7 @@ $colors: #F38181, #FCE38A, #E23E57, #95E1D3, #FFC4D0, #00DFFC;
 }
 
 @keyframes hover {
-  50% { transform: translateY(2px) scale(1.02); }
+  50% {
+    transform: translateY(2px) scale(1.02);
+  }
 }
-

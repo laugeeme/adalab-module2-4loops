@@ -16,22 +16,20 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: flex-start;
-    // background:$colorBackgroundImage
   }
 }
 
 //ESTILOS DEL PREVIEW
 
 .page__preview {
-  // background: linear-gradient(#bfcdd0, #dde9ed);
   padding-top: 38px;
   display: flex;
   justify-content: center;
   border-radius: 6px;
   height: 540px;
+  background-color: $colorIcons;
 
   .button_reset {
-    // margin-left: 20px;
     margin-bottom: 20px;
     border: 2px solid white;
     border-radius: 25px;
@@ -48,13 +46,12 @@
     }
   }
 
-
   .preview__card--box,
   .preview__card--box--palette1 {
     width: 240px;
     height: 329px;
     background-color: white;
-    // margin: 0px auto;
+
     .preview__card--header {
       padding: 21px 0 10px 20px;
       position: relative;
@@ -76,19 +73,17 @@
     .preview__card--picture {
       z-index: 20;
       height: 200px;
-      // background: url(https://media.giphy.com/media/Jq8EtJlWaYlQ6pziVp/giphy.gif);
+
       background: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e8afef60261411.5a44784a9dcc3.gif);
       background-size: cover;
       background-position: center;
     }
 
     .preview__card--links {
-      // padding: 10px 0 0 15px;
       text-align: center;
-      padding-top: 8px;;
+      padding-top: 8px;
 
       .preview__card--icon {
-        // display: inline-block;
         font-size: 18px;
         color: $colorLogo;
         border: 2px solid $colorPaletteOne3;
@@ -110,7 +105,6 @@
   @include forPc {
     width: 60vw;
   }
-  
 }
 .loop__background--preview {
   margin-top: 5px;
@@ -126,10 +120,10 @@
   display: none;
 }
 .fixed {
-  @include forTablet{
+  @include forTablet {
     position: fixed;
     top: 308px;
-    }
+  }
 }
 .fixed__mobile {
   position: fixed;
@@ -141,13 +135,9 @@
   transform: scalez(0.9);
 }
 
-
-
 // Extraemos sólo las propiedades que van a cambiar con cada input, en este caso los colores de Title, Preview Style e Icons.
 
-
 .page__preview {
-
   .preview__card--box--palette2 {
     .preview__card--header {
       h2 {
@@ -167,7 +157,6 @@
     }
   }
 
-
   .preview__card--box--palette3 {
     .preview__card--header {
       h2 {
@@ -186,7 +175,6 @@
       }
     }
   }
-
 
   .preview__card--box--palette4 {
     .preview__card--header {

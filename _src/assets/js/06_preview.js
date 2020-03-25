@@ -101,11 +101,7 @@ function changePreviewHeight() {
   if (window.innerWidth <= minHeight && window.innerHeight <= minHeight) {
     previewBackground.style.paddingTop = '38px';
   }
-
-  // console.log('main', formsBoxHeight);
-  // console.log('preview', previewBackground.style.height);
 }
-
 
 formsBox.addEventListener('click', changePreviewHeight);
 window.addEventListener('resize', changePreviewHeight);

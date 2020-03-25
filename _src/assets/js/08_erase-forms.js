@@ -34,4 +34,3 @@ function removePic() {
 }
 
 resetButton.addEventListener('click', resetForm);
-
