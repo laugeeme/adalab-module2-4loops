@@ -46,18 +46,18 @@ function printSavedTheme() { //para aplicar los estilos de la paleta
   let savedTheme = readSavedTheme();
   const previewCardBox = document.querySelector('.preview__card--box');
 
-  if(savedTheme === 'colorPalette1') {
-    previewPalette1 ()
-  } 
-  if(savedTheme === 'colorPalette2') {
-    previewPalette2 ()
-  } 
-  if(savedTheme === 'colorPalette3') {
-    previewPalette3 ()
-  } 
-  if(savedTheme === 'colorPalette4') {
+  if (savedTheme === '1') {
+    previewPalette1()
+  }
+  if (savedTheme === '2') {
+    previewPalette2()
+  }
+  if (savedTheme === '3') {
+    previewPalette3()
+  }
+  if (savedTheme === '4') {
     previewPalette4()
-  } 
+  }
 
 }
 
@@ -94,7 +94,7 @@ function printSavedInfo() { //para añadir la información al formulario
     }
 
   }
-  
+
   printInfoToCard()
 }
 
@@ -132,9 +132,11 @@ function readLocalImage() {// para recuperar imagen en local
   return localImage
 }
 
+window.addEventListener('load', readLocalImage)
+
 function printSavedImage() {// para pintar la imagen guardada
   const savedImage = readLocalImage();
-  
+
   profileImage.style.backgroundImage = savedImage;
   profilePreview.style.backgroundImage = savedImage;
 }
