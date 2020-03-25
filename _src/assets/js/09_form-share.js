@@ -48,47 +48,37 @@ function addListenersToInputs() {
   }
 }
 
-// function validateFields(evt) {
-//   if (evt.currentTarget.id === 'name' && evt.currentTarget.value !== '') {
-//     createCardButton.disabled = false;
-//     errorMessage.classList.add('hidden');
-//   } else {
-//     createCardButton.disabled = true;
-//     errorMessage.classList.remove('hidden');
-//   }
-//   if (evt.currentTarget.id === 'job' && evt.currentTarget.value !== '') {
-//     createCardButton.disabled = false;
-//     errorMessage.classList.add('hidden');
-//   } else {
-//     createCardButton.disabled = true;
-//     errorMessage.classList.remove('hidden');
-//   }
-//   if (evt.currentTarget.id === 'email' && evt.currentTarget.value !== '') {
-//     createCardButton.disabled = false;
-//     errorMessage.classList.add('hidden');
-//   } else {
-//     createCardButton.disabled = true;
-//     errorMessage.classList.remove('hidden');
-//   }
+/* function validateFields(evt) {
+  if (evt.currentTarget.id === 'name' && evt.currentTarget.value !== '') {
+    createCardButton.disabled = false;
+    errorMessage.classList.add('hidden');
+  } else {
+    createCardButton.disabled = true;
+    errorMessage.classList.remove('hidden');
+  }
+  if (evt.currentTarget.id === 'job' && evt.currentTarget.value !== '') {
+    createCardButton.disabled = false;
+    errorMessage.classList.add('hidden');
+  } else {
+    createCardButton.disabled = true;
+    errorMessage.classList.remove('hidden');
+  }
+  if (evt.currentTarget.id === 'email' && evt.currentTarget.value !== '') {
+    createCardButton.disabled = false;
+    errorMessage.classList.add('hidden');
+  } else {
+    createCardButton.disabled = true;
+    errorMessage.classList.remove('hidden');
+  }
 
-//   if (evt.currentTarget.id === 'linkedin' && evt.currentTarget.value !== '') {
-//     createCardButton.disabled = false;
-//     errorMessage.classList.add('hidden');
-//   } else {
-//     createCardButton.disabled = true;
-//     errorMessage.classList.remove('hidden');
-//   }
-//   if (evt.currentTarget.id === 'github' && evt.currentTarget.value !== '') {
-//     createCardButton.disabled = false;
-//     errorMessage.classList.add('hidden');
-//   } else {
-//     createCardButton.disabled = true;
-//     errorMessage.classList.remove('hidden');
-//   }
-// }
-
-function validateFields() {
-  if(fullName !== '' && jobPosition !== '' && emailAddress !== '' &&  linkedin !== '' && github !== '' && profileImage.style.background !== '') {
+  if (evt.currentTarget.id === 'linkedin' && evt.currentTarget.value !== '') {
+    createCardButton.disabled = false;
+    errorMessage.classList.add('hidden');
+  } else {
+    createCardButton.disabled = true;
+    errorMessage.classList.remove('hidden');
+  }
+  if (evt.currentTarget.id === 'github' && evt.currentTarget.value !== '') {
     createCardButton.disabled = false;
     errorMessage.classList.add('hidden');
   } else {
@@ -96,6 +86,31 @@ function validateFields() {
     errorMessage.classList.remove('hidden');
   }
 }
+ */
+
+
+function validateFields(evt) {
+  if (fullName.value === '' || jobPosition.value === '' || emailAddress.value === '' || linkedin.value === '' || github.value === '') {
+    event.preventDefault();
+    createCardButton.disabled = true;
+    errorMessage.classList.remove('hidden');
+    
+  } else {
+    createCardButton.disabled = false;
+    errorMessage.classList.add('hidden');  
+  }
+}
+createCardButton.addEventListener('click', validateFields);
+window.addEventListener('load', validateFields);
+
+
+
+
+
+
+
+
+
 
 userForm.addEventListener('keyup', validateFields);
 window.addEventListener('load', validateFields);

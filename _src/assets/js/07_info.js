@@ -114,8 +114,8 @@ function readLocalImage() {
 function printSavedImage() {
   const savedImage = readLocalImage();
 
-  profileImage.style.backgroundImage = savedImage;
-  profilePreview.style.backgroundImage = savedImage;
+  profileImage.style.backgroundImage = `url(${savedImage})`;
+  profilePreview.style.backgroundImage = `url(${savedImage})`;
 }
 
 //Función para borar los datos de localstorage
