@@ -2,7 +2,6 @@
 
 let userInfo = readUserInfo();
 
-//Función para paleta de colores
 function saveSelectedTheme(event) {
   localStorage.setItem('palette', event.currentTarget.value);
 }
@@ -59,17 +58,13 @@ function setLocalUserInfo() {
 
 function readUserInfo() {
   let userInfo = JSON.parse(localStorage.getItem('userInfo'));
-  if (userInfo !== null) {
-    return userInfo
-  } else {
-    return userInfo = {}
-  }
-  
+  return userInfo === null ? {} : userInfo;
 }
 
 function printSavedInfo() {
   let localUserInfo = readUserInfo();
   const inputArray = document.querySelectorAll('.input');
+
 
   for (let item of inputArray) {
     if (localUserInfo[item.name] !== undefined) {
@@ -100,6 +95,7 @@ function printInfoToCard() {
   showPhoneIcon();
   showLinkedinIcon();
   showGithubIcon();
+  printSavedImage();
 }
 
 //Función para la imagen
@@ -107,7 +103,7 @@ function setProfileImage() {
   profileImage.style.backgroundImage = `url(${fr.result})`;
   let imageUrl = profileImage.style.backgroundImage;
 
-  localStorage.setItem('image', imageUrl);
+  localStorage.setItem('image', `${fr.result}`);
 }
 
 function readLocalImage() {

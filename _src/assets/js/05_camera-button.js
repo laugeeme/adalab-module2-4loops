@@ -33,18 +33,26 @@ init();
 var context = canvas.getContext('2d');
 snap.addEventListener('click', takePhoto);
 
-function takePhoto() {
+function takePhoto(e) {
+  e.preventDefault();
   console.log('entro');
   canvas.classList.remove('hiddenCanvas');
   canvas.classList.add('showCanvas');
 
   context.drawImage(video, 0, 0, 200, 180);
+
+  var imageCanvas = canvas.toDataURL();
+
+  localStorage.setItem('image', imageCanvas);
+
+
 }
 
 const videoWrap = document.querySelector('.video-wrap');
 const controller = document.querySelector('.controller');
 
-function showCamera() {
+function showCamera(e) {
+  e.preventDefault();
   videoWrap.classList.add('showCamera');
   controller.classList.add('showCamera');
   videoWrap.classList.remove('hiddenCamera');

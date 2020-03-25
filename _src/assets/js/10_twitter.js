@@ -1,26 +1,14 @@
-'use strict';
+'use strict'; 
 
-const cardForTwitter = userInfo; 
-
-function defaultImage(myFile) {
-  if(localStorage.getItem('image') === null) {
-    return 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e8afef60261411.5a44784a9dcc3.gif'
-  } else {
-    return fr.result;
-  }
-
-  console.log('localImage', localImage)
-}
+let cardForTwitter;
 
 function createInfoObject() {
   //función para añadir al objeto la imagen y los colores
 
-  cardForTwitter.photo = defaultImage()
-  console.log('photo', cardForTwitter.photo)
-  cardForTwitter.palette = readSavedTheme();
+  cardForTwitter = readUserInfo(); //se crea un objeto para guardar la información de la tarjeta que se va a crear, empezando por rescatar la información guardada en local del formulario (funciones "read" para leer la info guardada en local en info.js)
 
-  // cardForTwitter.photo = readLocalImage();
-  // cardForTwitter.palette = readSavedTheme();
+  cardForTwitter.photo = readLocalImage();
+  cardForTwitter.palette = readSavedTheme();
 
   console.log('cardForTwitter', cardForTwitter);
 

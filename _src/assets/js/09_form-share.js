@@ -14,7 +14,9 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
+
 /*********************SECOND collapsible after click on btn-create ********************/
+
 
 let coll2 = document.getElementsByClassName('panel__coll--child');
 let i2;
@@ -30,7 +32,13 @@ for (i2 = 0; i2 < coll2.length; i2++) {
   });
 }
 
+
 // Desactiva el botón de crear tarjeta en caso de que el formulario no esté completo.
+
+
+
+
+
 
 const allFormInputs = document.querySelectorAll('.input-required');
 
