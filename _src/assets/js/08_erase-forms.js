@@ -1,7 +1,5 @@
 'use strict';
 
-const resetButton = document.querySelector('.button_reset');
-
 function resetForm() {
   document.getElementById('myForm').reset();
   document.getElementById('myFormPalette').reset();
@@ -32,5 +30,3 @@ function removeCanvas() {
 function removePic() {
   profileImage.style.backgroundImage = `url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e8afef60261411.5a44784a9dcc3.gif)`;
 }
-
-resetButton.addEventListener('click', resetForm);

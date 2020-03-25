@@ -32,10 +32,6 @@ for (i2 = 0; i2 < coll2.length; i2++) {
 
 // Desactiva el botón de crear tarjeta en caso de que el formulario no esté completo.
 
-const createCardButton = document.querySelector('.btn-create');
-const errorMessage = document.querySelector('.error-message');
-const twitterButtonContainer = document.querySelector('.panel__content2');
-
 const allFormInputs = document.querySelectorAll('.input-required');
 
 function addListenersToInputs() {
@@ -82,14 +78,6 @@ function validateFields(evt) {
     errorMessage.classList.remove('hidden');
   }
 }
-
-fullName.addEventListener('keyup', validateFields);
-jobPosition.addEventListener('keyup', validateFields);
-emailAddress.addEventListener('keyup', validateFields);
-linkedin.addEventListener('keyup', validateFields);
-github.addEventListener('keyup', validateFields);
-
-
 
 
 // activar/desactivar botón Twitter
