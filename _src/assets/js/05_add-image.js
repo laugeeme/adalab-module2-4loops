@@ -14,8 +14,8 @@ function getImage(event) {
  function addImage() {
     profileImage.style.backgroundImage = `url(${fr.result})`;
     profilePreview.style.backgroundImage = `url(${fr.result})`;
-
-    setProfileImage()
+    console.log(profileImage.style.backgroundImage);
+    setProfileImage(fr)
 }
 
 function generateClick() {
