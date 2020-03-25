@@ -113,9 +113,13 @@ function readLocalImage() {
 
 function printSavedImage() {
   const savedImage = readLocalImage();
+  if(savedImage !== null) {
+    profileImage.style.backgroundImage = `url(${savedImage})`;
+    profilePreview.style.backgroundImage = `url(${savedImage})`;
+  } else {
+    profileImage.style.backgroundImage = 'url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e8afef60261411.5a44784a9dcc3.gif)'
+  }
 
-  profileImage.style.backgroundImage = `url(${savedImage})`;
-  profilePreview.style.backgroundImage = `url(${savedImage})`;
 }
 
 //Función para borar los datos de localstorage
