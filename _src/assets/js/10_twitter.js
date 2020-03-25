@@ -10,8 +10,10 @@ const successMessage = document.querySelector('#success-message'); //mensaje de 
 
 const cardForTwitter = readUserInfo(); //se crea un objeto para guardar la información de la tarjeta que se va a crear, empezando por rescatar la información guardada en local del formulario (funciones "read" para leer la info guardada en local en info.js)
 
-function createInfoObject() {
-  //función para añadir al objeto la imagen y los colores
+function createInfoObject() { //función para añadir al objeto la imagen y los colores
+
+  cardForTwitter.photo = readLocalImage();
+  cardForTwitter.palette = readSavedTheme(); 
 
   cardForTwitter.photo = readLocalImage();
   cardForTwitter.palette = readSavedTheme();
@@ -46,14 +48,11 @@ function showURL(result) {
   //pintamos la url en la web
   console.log(result.cardURL);
   urlArea.classList.remove('hidden');
-  // if(result.result){ //si el resultado es "success"
-  // errorMessageCard.classList.remove('display__none'); //quitamos clase "display__none" al mensaje de error
-  // }else{
-  successMessage.classList.remove('display__none'); //quitamos clase "display__none" al mensaje de éxito
-  twitterCardButton.classList.remove('display__none'); //quitamos clase "display__none" al botón de Twitter para compartir
-  printURL.innerHTML = result.cardURL; //pintamos la url en pantalla
-  printURL.href = result.cardURL; //añadimos la url al href del enlace
-  // }
+    successMessage.classList.remove('display__none'); //quitamos clase "display__none" al mensaje de éxito
+    twitterCardButton.classList.remove('display__none') //quitamos clase "display__none" al botón de Twitter para compartir
+    printURL.innerHTML = result.cardURL; //pintamos la url en pantalla
+    printURL.href = result.cardURL; //añadimos la url al href del enlace
+    // }
 }
 
 function twitterLink() {
