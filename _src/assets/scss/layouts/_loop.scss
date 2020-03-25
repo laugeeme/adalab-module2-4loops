@@ -13,7 +13,7 @@ $colors: #F38181, #FCE38A, #E23E57, #95E1D3, #FFC4D0, #00DFFC;
   justify-content: space-between; //antes center
   // background-color: $light-theme;
   transition: background-color 200ms;
-  width: 92px; //antes 300px
+  width: 89px; //antes 300px
   position: absolute;
   right: 0px;
 }
@@ -21,7 +21,7 @@ $colors: #F38181, #FCE38A, #E23E57, #95E1D3, #FFC4D0, #00DFFC;
 ////////////Meto container para el loop
 .loop__container {
   position: absolute;
-  left: 35px;
+  left: 33px;
   top: -2px;
 }
 //////////////

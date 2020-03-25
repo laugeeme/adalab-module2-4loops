@@ -1,12 +1,13 @@
 <button type="button" class="panel__coll btn-share"><i class="fas fa-share-alt"></i>Comparte</button>
 <div class="panel__content display__none">
-  <button disabled type="button" class="panel__coll--child btn-create" id="createCardButton" ><i class="far fa-address-card"></i>Crear
+  <button disabled type="button" class="panel__coll--child btn-create button__hover--styles" id="createCardButton" ><i class="far fa-address-card"></i>Crear
     tarjeta</button>
-    <span class="error-message errorEmail">* Faltan campos por completar *</span>
-  <div class="panel__content2 hidden">
-    <p>La tarjeta ha sido creada:</p>
 
-    <button type="button" class="btn-twit"><i class="fab fa-twitter"></i>Compartir en Twitter</button>
+    <span class="error-message errorEmail">*Faltan campos por completar*</span> <!-- DEVELOPbr en mi rama la clase tenía además "display__none"-->
+
+  <div class="panel__content2 hidden">
+    <p id="success-message" class="success-message display__none">La tarjeta ha sido creada:</p> <!-- DEVELOPbr en mi rama la p tenía además: id="success-message" class="success-message display__none" -->
+    <a class="print__url--twitter" href='' target="local"></a>
+    <a type="button" class="btn-twit button__hover--styles display__none" target="local"><i class="fab fa-twitter" href=""></i>Compartir en Twitter</a>
   </div>
-  <!-- <div class="btn-create"><i class="far fa-address-card"></i><a href="#">Crear tarjeta</a></div> -->
 </div>

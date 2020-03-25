@@ -1,0 +1,19 @@
+.button__hover--styles {
+    &:hover {
+    opacity: 0.6;
+    transition: opacity 0.5s;
+    }
+    &:active {
+    opacity: 0.3; 
+    }
+    cursor: pointer;
+}
+
+// &:hover, &:focus {
+//     background-color: #c1453a;
+//     transition: background-color 0.5s;
+//   }
+
+//   &:active {
+//     opacity: 0.6;
+//   }

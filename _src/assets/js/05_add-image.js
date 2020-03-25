@@ -11,9 +11,11 @@ function getImage(event) {
   fr.addEventListener('load', addImage);
   fr.readAsDataURL(myFile);
 }
-function addImage() {
-  profileImage.style.backgroundImage = `url(${fr.result})`;
-  profilePreview.style.backgroundImage = `url(${fr.result})`;
+ function addImage() {
+    profileImage.style.backgroundImage = `url(${fr.result})`;
+    profilePreview.style.backgroundImage = `url(${fr.result})`;
+    console.log(profileImage.style.backgroundImage);
+    setProfileImage(fr)
 }
 
 function generateClick() {
