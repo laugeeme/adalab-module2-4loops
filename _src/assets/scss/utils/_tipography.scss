@@ -21,9 +21,6 @@ $colorPaletteFour2:#00DFFC;
 $colorPaletteFour3:#FCE38A;
 
 
-/* $colorPaletteFour1:rgb(15, 76, 129);
-$colorPaletteFour2:rgb(192, 215, 37);
-$colorPaletteFour3:rgb(242, 107, 91); */
 
 $colorBackgroundImage: linear-gradient(to bottom, #f5f5f5, #ffffff 9%);
 
@@ -96,7 +93,7 @@ $colorBackgroundImage: linear-gradient(to bottom, #f5f5f5, #ffffff 9%);
 
     font-size: 18px;//antes 30px
     font-family: 'Chewy', cursive;
-    color:#114e4e;
+    color:$colorLogo;
     text-shadow: 0.5px 0.9px #a2deaf;
   }
 
