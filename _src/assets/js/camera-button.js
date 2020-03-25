@@ -35,7 +35,6 @@ snap.addEventListener("click", takePhoto);
 
 function takePhoto(){
 
-    console.log("entro");
     canvas.classList.remove('hiddenCanvas');
     canvas.classList.add('showCanvas'); 
 

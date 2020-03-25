@@ -10,10 +10,10 @@ const github = document.querySelector('#github');
 const previewFullName = document.querySelector('.font__preview--title');
 const previewJobPosition = document.querySelector('.font__preview--subtitle');
 function copyInfoName(event) {
-    previewFullName.innerHTML = fullName.value || 'Nombre Apellido';
+  previewFullName.innerHTML = fullName.value || 'Nombre Apellido';
 }
 function copyInfoJob() {
-    previewJobPosition.innerHTML = jobPosition.value || 'Puesto';
+  previewJobPosition.innerHTML = jobPosition.value || 'Puesto';
 }
 fullName.addEventListener('keyup', copyInfoName);
 jobPosition.addEventListener('keyup', copyInfoJob);

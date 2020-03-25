@@ -6,6 +6,7 @@ const fileField = document.querySelector('#img-selector');
 const profileImage = document.querySelector('.preview__card--picture');
 const profilePreview = document.querySelector('.empty-box');
 
+
 function getImage(event) {
   let myFile = event.currentTarget.files[0];
   fr.addEventListener('load', addImage);
