@@ -97,16 +97,13 @@ const allFormInputs = document.querySelectorAll('.input-required');
 
 
 function validateFields(evt) {
-  createCardButton.disabled = false;
-  errorMessage.classList.add('hidden');
 
-  if (fullName.value === '' || jobPosition.value === '' || emailAddress.value === '' || linkedin.value === '' || github.value === '') {
+  if (fullName.value !== '' && jobPosition.value !== '' && emailAddress.value !== '' && linkedin.value !== '' && github.value !== '') {
     event.preventDefault();
-    createCardButton.disabled = false;
-    errorMessage.classList.remove('hidden')
+    errorMessage.classList.add('hidden');
+    createInfoObject();
   } else {
-    createCardButton.disabled = true;
-    errorMessage.classList.add('hidden');  
+    errorMessage.classList.remove('hidden');  
   }
 }
 
