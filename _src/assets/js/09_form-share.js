@@ -14,9 +14,7 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-
 /*********************SECOND collapsible after click on btn-create ********************/
-
 
 let coll2 = document.getElementsByClassName('panel__coll--child');
 let i2;
@@ -32,13 +30,7 @@ for (i2 = 0; i2 < coll2.length; i2++) {
   });
 }
 
-
 // Desactiva el botón de crear tarjeta en caso de que el formulario no esté completo.
-
-
-
-
-
 
 const allFormInputs = document.querySelectorAll('.input-required');
 
@@ -88,33 +80,27 @@ function addListenersToInputs() {
 }
  */
 
-
 function validateFields(evt) {
-  if (fullName.value === '' || jobPosition.value === '' || emailAddress.value === '' || linkedin.value === '' || github.value === '') {
+  if (
+    fullName.value === '' ||
+    jobPosition.value === '' ||
+    emailAddress.value === '' ||
+    linkedin.value === '' ||
+    github.value === ''
+  ) {
     event.preventDefault();
     createCardButton.disabled = true;
     errorMessage.classList.remove('hidden');
-    
   } else {
     createCardButton.disabled = false;
-    errorMessage.classList.add('hidden');  
+    errorMessage.classList.add('hidden');
   }
 }
 createCardButton.addEventListener('click', validateFields);
 window.addEventListener('load', validateFields);
 
-
-
-
-
-
-
-
-
-
 userForm.addEventListener('keyup', validateFields);
 window.addEventListener('load', validateFields);
-
 
 // activar/desactivar botón Twitter
 
