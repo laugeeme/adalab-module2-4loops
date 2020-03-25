@@ -48,7 +48,7 @@ function addListenersToInputs() {
   }
 }
 
-function validateFields(evt) {
+/* function validateFields(evt) {
   if (evt.currentTarget.id === 'name' && evt.currentTarget.value !== '') {
     createCardButton.disabled = false;
     errorMessage.classList.add('hidden');
@@ -86,6 +86,31 @@ function validateFields(evt) {
     errorMessage.classList.remove('hidden');
   }
 }
+ */
+
+
+function validateFields(evt) {
+  if (fullName.value === '' || jobPosition.value === '' || emailAddress.value === '' || linkedin.value === '' || github.value === '') {
+    event.preventDefault();
+    createCardButton.disabled = true;
+    errorMessage.classList.remove('hidden');
+    
+  } else {
+    createCardButton.disabled = false;
+    errorMessage.classList.add('hidden');  
+  }
+}
+createCardButton.addEventListener('click', validateFields);
+window.addEventListener('load', validateFields);
+
+
+
+
+
+
+
+
+
 
 
 // activar/desactivar botón Twitter

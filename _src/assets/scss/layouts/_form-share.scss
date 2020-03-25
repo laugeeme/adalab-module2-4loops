@@ -26,8 +26,7 @@
 }
 
 /* Add a background color to the button if it is clicked on (add the .active2 class with JS), and when you move the mouse over it (hover) */
-.active2,
-.btn-create:after {
+.active2, .btn-create:after {
   background-color: #00dffc;
 }
 
