@@ -5,101 +5,91 @@
 }
 
 .design-form-form {
-    font-size: 14px;  //provisional
-    width: 280px;
-    height: 60px; 
-    display: flex;
-    justify-content: space-between;
+  font-size: 14px; //provisional
+  width: 280px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
 
-    h3 {
-        font-family: $fontBody;
-        color: #54585a;
-        font-size: 14px;
-        line-height: 19px;
-        @include text-uppercase;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal
-      }
-    
-    
+  h3 {
+    font-family: $fontBody;
+    color: #54585a;
+    font-size: 14px;
+    line-height: 19px;
+    @include text-uppercase;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
 
   & input {
     width: 17px;
     height: 17px;
-    
   }
 }
 
-
-.palette{
+.palette {
   display: flex;
-  
 }
 
-.palette-colour-container{
+.palette-colour-container {
   display: flex;
-  padding-bottom: 20px ;
+  padding-bottom: 20px;
   padding-left: 10px;
   padding-right: 20px;
-
 }
 
-.palette-colour{
+.palette-colour {
   width: 30px;
   height: 25px;
 }
 
-.colorBox__1-1{
-  background-color:$colorPaletteOne1;
+.colorBox__1-1 {
+  background-color: $colorPaletteOne1;
 }
 
-.colorBox__1-2{
-  background-color:$colorPaletteOne2;
+.colorBox__1-2 {
+  background-color: $colorPaletteOne2;
 }
 
-.colorBox__1-3{
-  background-color:$colorPaletteOne3;
+.colorBox__1-3 {
+  background-color: $colorPaletteOne3;
 }
 
-
-.colorBox__2-1{
+.colorBox__2-1 {
   background-color: $colorPaletteTwo1;
 }
 
-.colorBox__2-2{
-  background-color:$colorPaletteTwo2;
+.colorBox__2-2 {
+  background-color: $colorPaletteTwo2;
 }
 
-.colorBox__2-3{
+.colorBox__2-3 {
   background-color: $colorPaletteTwo3;
 }
 
-.colorBox__3-1{
+.colorBox__3-1 {
   background-color: $colorPaletteThree1;
 }
 
-.colorBox__3-2{
+.colorBox__3-2 {
   background-color: $colorPaletteThree2;
 }
 
-.colorBox__3-3{
+.colorBox__3-3 {
   background-color: $colorPaletteThree3;
 }
 
-
-.colorBox__4-1{
+.colorBox__4-1 {
   background-color: $colorPaletteFour1;
 }
 
-.colorBox__4-2{
+.colorBox__4-2 {
   background-color: $colorPaletteFour2;
 }
 
-.colorBox__4-3{
-  background-color:$colorPaletteFour3;
+.colorBox__4-3 {
+  background-color: $colorPaletteFour3;
 }
-
-
