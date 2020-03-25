@@ -82,13 +82,14 @@ function setLocalUserInfo() {
 function readUserInfo() {
   //para recuperar la información local
   let savedUserInfo = JSON.parse(localStorage.getItem('userInfo'));
-  return savedUserInfo;
+  return savedUserInfo === null ? {} : savedUserInfo;
 }
 
 function printSavedInfo() {
   //para añadir la información al formulario
   let localUserInfo = readUserInfo();
   const inputArray = document.querySelectorAll('.input');
+
 
   for (let item of inputArray) {
     if (localUserInfo[item.name] !== undefined) {
@@ -122,6 +123,7 @@ function printInfoToCard() {
   showPhoneIcon();
   showLinkedinIcon();
   showGithubIcon();
+  printSavedImage();
 }
 
 //FUNCIÓN PARA LA IMAGEN
@@ -130,7 +132,7 @@ function setProfileImage() {
   profileImage.style.backgroundImage = `url(${fr.result})`;
   let imageUrl = profileImage.style.backgroundImage;
 
-  localStorage.setItem('image', imageUrl);
+  localStorage.setItem('image', `${fr.result}`);
 }
 
 function readLocalImage() {

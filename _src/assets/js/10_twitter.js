@@ -8,16 +8,18 @@ const urlArea = document.querySelector('.panel__content2');
 const errorMessageCard = document.querySelector('#error-message'); //mensaje de error si falta algún campo
 const successMessage = document.querySelector('#success-message'); //mensaje de éxito si se crea la tarjeta
 
-const cardForTwitter = readUserInfo(); //se crea un objeto para guardar la información de la tarjeta que se va a crear, empezando por rescatar la información guardada en local del formulario (funciones "read" para leer la info guardada en local en info.js)
+let cardForTwitter;
 
 function createInfoObject() {
   //función para añadir al objeto la imagen y los colores
 
-  cardForTwitter.photo = readLocalImage();
-  cardForTwitter.palette = readSavedTheme();
+  cardForTwitter = readUserInfo(); //se crea un objeto para guardar la información de la tarjeta que se va a crear, empezando por rescatar la información guardada en local del formulario (funciones "read" para leer la info guardada en local en info.js)
 
   cardForTwitter.photo = readLocalImage();
   cardForTwitter.palette = readSavedTheme();
+
+  //cardForTwitter.photo = readLocalImage();
+  //cardForTwitter.palette = readSavedTheme();
 
   console.log('cardForTwitter', cardForTwitter);
 
