@@ -2,101 +2,91 @@
 $fontLandingTitle: 'Merriweather';
 $fontBody: 'Open Sans';
 $fontTitle: 'Montserrat';
-// $colorIcons: #e17334;
-$colorIcons: #E25345;
+$colorIcons: #e25345;
 $colorLogo: #114e4e;
 $colorBody: #54585a;
 $colorFooter: #6b6b6b;
-$colorPaletteOne1:#114e4e;
-$colorPaletteOne2:#438792;
-$colorPaletteOne3:#a2deaf;
-$colorPaletteTwo1:#420101;
-$colorPaletteTwo2:#bd1010;
-$colorPaletteTwo3:#e95626;
-$colorPaletteThree1:#3e5b65;
-$colorPaletteThree2:#eab052;
-$colorPaletteThree3:#a0c0cf;
-$colorPaletteFour1: #F38181;
-$colorPaletteFour2:#00DFFC;
-$colorPaletteFour3:#FCE38A;
-
-
-/* $colorPaletteFour1:rgb(15, 76, 129);
-$colorPaletteFour2:rgb(192, 215, 37);
-$colorPaletteFour3:rgb(242, 107, 91); */
+$colorPaletteOne1: #114e4e;
+$colorPaletteOne2: #438792;
+$colorPaletteOne3: #a2deaf;
+$colorPaletteTwo1: #420101;
+$colorPaletteTwo2: #bd1010;
+$colorPaletteTwo3: #e95626;
+$colorPaletteThree1: #3e5b65;
+$colorPaletteThree2: #eab052;
+$colorPaletteThree3: #a0c0cf;
+$colorPaletteFour1: #f38181;
+$colorPaletteFour2: #00dffc;
+$colorPaletteFour3: #fce38a;
 
 $colorBackgroundImage: linear-gradient(to bottom, #f5f5f5, #ffffff 9%);
 
-
 .font__landing--title {
-    font-family: $fontLandingTitle;
-    font-size: 19.2px;
-    color: $colorIcons;
-    // @include forTablet {
-    //     font-size: 24px;
-    // }
+  font-family: $fontLandingTitle;
+  font-size: 19.2px;
+  color: $colorIcons;
+  // @include forTablet {
+  //     font-size: 24px;
+  // }
 }
 
 .font__subtitle {
-    font-family: $fontBody;
-    font-size: 12.8px;
-    color: $colorLogo;
-    // @include forTablet {
-    //     font-size: 16px;
-    // }
+  font-family: $fontBody;
+  font-size: 12.8px;
+  color: $colorLogo;
+  // @include forTablet {
+  //     font-size: 16px;
+  // }
 }
 
 .font__icons {
-    font-family: $fontBody;
-    font-size: 12.8px;
-    color: $colorBody; 
+  font-family: $fontBody;
+  font-size: 12.8px;
+  color: $colorBody;
 
-   /*  @include forTablet {
+  /*  @include forTablet {
     font-size: 16px;
     }  */
 }
 
 .font__footer {
-    font-family: $fontBody;
-    font-size: 14px;
-    color: $colorFooter;
-
+  font-family: $fontBody;
+  font-size: 14px;
+  color: $colorFooter;
 }
 
 .font__form {
-    font-size: 18px;
-    font-family: $fontBody;
-    font-weight: 600;
-    background-image: $colorBackgroundImage;
+  font-size: 18px;
+  font-family: $fontBody;
+  font-weight: 600;
+  background-image: $colorBackgroundImage;
 }
 
 .form__font--labels {
-    font-family: $fontBody;
-    font-size: 14px;
-    color: $colorLogo;
-    line-height: 20px;
+  font-family: $fontBody;
+  font-size: 14px;
+  color: $colorLogo;
+  line-height: 20px;
 }
 
 .font__preview--title {
-    font-family: $fontTitle;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 20px;
-    color: $colorLogo;
+  font-family: $fontTitle;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  color: $colorLogo;
 }
 
 .font__preview--subtitle {
-    font-family: $fontTitle;
-    font-size: 16px;
-    line-height: 20px;
-    color: $colorBody;
+  font-family: $fontTitle;
+  font-size: 16px;
+  line-height: 20px;
+  color: $colorBody;
 }
 
 .logo_4loop-letter {
-
-    font-size: 18px;//antes 30px
-    font-family: 'Chewy', cursive;
-    color:#114e4e;
-    text-shadow: 0.5px 0.9px #a2deaf;
-  }
-
+  font-size: 18px;
+  font-family: 'Chewy', cursive;
+  color: $colorLogo;
+  text-shadow: 0.5px 0.9px #a2deaf;
+}
