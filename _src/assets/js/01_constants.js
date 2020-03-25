@@ -28,6 +28,7 @@ const previewCardBox = document.querySelector('.preview__card--box');
 const previewFullName = document.querySelector('.font__preview--title');
 const previewJobPosition = document.querySelector('.font__preview--subtitle');
 const profileImage = document.querySelector('.preview__card--picture');
+// const proflieImageChoosed = profileImage.style.background
 const cardIconMail = document.querySelector('.preview__card--iconEmail');
 const cardIconPhone = document.querySelector('#preview__card--iconPhone');
 const cardIconLinkedin = document.querySelector('.preview__card--iconLinkedin');

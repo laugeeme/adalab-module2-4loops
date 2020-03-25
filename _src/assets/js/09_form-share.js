@@ -48,37 +48,47 @@ function addListenersToInputs() {
   }
 }
 
-function validateFields(evt) {
-  if (evt.currentTarget.id === 'name' && evt.currentTarget.value !== '') {
-    createCardButton.disabled = false;
-    errorMessage.classList.add('hidden');
-  } else {
-    createCardButton.disabled = true;
-    errorMessage.classList.remove('hidden');
-  }
-  if (evt.currentTarget.id === 'job' && evt.currentTarget.value !== '') {
-    createCardButton.disabled = false;
-    errorMessage.classList.add('hidden');
-  } else {
-    createCardButton.disabled = true;
-    errorMessage.classList.remove('hidden');
-  }
-  if (evt.currentTarget.id === 'email' && evt.currentTarget.value !== '') {
-    createCardButton.disabled = false;
-    errorMessage.classList.add('hidden');
-  } else {
-    createCardButton.disabled = true;
-    errorMessage.classList.remove('hidden');
-  }
+// function validateFields(evt) {
+//   if (evt.currentTarget.id === 'name' && evt.currentTarget.value !== '') {
+//     createCardButton.disabled = false;
+//     errorMessage.classList.add('hidden');
+//   } else {
+//     createCardButton.disabled = true;
+//     errorMessage.classList.remove('hidden');
+//   }
+//   if (evt.currentTarget.id === 'job' && evt.currentTarget.value !== '') {
+//     createCardButton.disabled = false;
+//     errorMessage.classList.add('hidden');
+//   } else {
+//     createCardButton.disabled = true;
+//     errorMessage.classList.remove('hidden');
+//   }
+//   if (evt.currentTarget.id === 'email' && evt.currentTarget.value !== '') {
+//     createCardButton.disabled = false;
+//     errorMessage.classList.add('hidden');
+//   } else {
+//     createCardButton.disabled = true;
+//     errorMessage.classList.remove('hidden');
+//   }
 
-  if (evt.currentTarget.id === 'linkedin' && evt.currentTarget.value !== '') {
-    createCardButton.disabled = false;
-    errorMessage.classList.add('hidden');
-  } else {
-    createCardButton.disabled = true;
-    errorMessage.classList.remove('hidden');
-  }
-  if (evt.currentTarget.id === 'github' && evt.currentTarget.value !== '') {
+//   if (evt.currentTarget.id === 'linkedin' && evt.currentTarget.value !== '') {
+//     createCardButton.disabled = false;
+//     errorMessage.classList.add('hidden');
+//   } else {
+//     createCardButton.disabled = true;
+//     errorMessage.classList.remove('hidden');
+//   }
+//   if (evt.currentTarget.id === 'github' && evt.currentTarget.value !== '') {
+//     createCardButton.disabled = false;
+//     errorMessage.classList.add('hidden');
+//   } else {
+//     createCardButton.disabled = true;
+//     errorMessage.classList.remove('hidden');
+//   }
+// }
+
+function validateFields() {
+  if(fullName !== '' && jobPosition !== '' && emailAddress !== '' &&  linkedin !== '' && github !== '' && profileImage.style.background !== '') {
     createCardButton.disabled = false;
     errorMessage.classList.add('hidden');
   } else {
@@ -86,6 +96,9 @@ function validateFields(evt) {
     errorMessage.classList.remove('hidden');
   }
 }
+
+userForm.addEventListener('keyup', validateFields);
+window.addEventListener('load', validateFields);
 
 
 // activar/desactivar botón Twitter
