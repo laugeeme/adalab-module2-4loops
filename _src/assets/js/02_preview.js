@@ -90,14 +90,22 @@ const formsBox = document.querySelector('.panel');
 function changePreviewHeight() {
   const formsBoxHeight = parseInt(formsBox.clientHeight);
   const minHeight = 768;
-  if (formsBoxHeight < minHeight) {
+  if (window.innerWidth <= minHeight) {
+    previewBackground.style.height = '540px';
+  } else if (formsBoxHeight < minHeight) {
     previewBackground.style.height = `${minHeight}px`;
   } else {
     previewBackground.style.height = `${formsBoxHeight}px`;
   }
 
-  console.log('main', formsBoxHeight);
-  console.log('preview', previewBackground.style.height);
+  if (window.innerWidth <= minHeight && window.innerHeight <= minHeight) {
+    previewBackground.style.paddingTop = '38px';
+  }
+
+  // console.log('main', formsBoxHeight);
+  // console.log('preview', previewBackground.style.height);
 }
 
+
 formsBox.addEventListener('click', changePreviewHeight);
+window.addEventListener('resize', changePreviewHeight);

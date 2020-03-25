@@ -16,55 +16,56 @@ const inputPhone = document.querySelector('#phone');
 const inputLinkedin = document.querySelector('#linkedin');
 const inputGithub = document.querySelector('#github');
 
-//Constantes para guardar y reutilizar la información del usuario
-const userInfo = {}
+const userInfo = {};
 
-
-//Función para paleta de colores
-function saveSelectedTheme(event) { //para guardar la paleta
-  localStorage.setItem('theme', event.currentTarget.id);
+//FUNCIÓN PARA PALETA DE COLORES
+function saveSelectedTheme(event) {
+  //para guardar la paleta
+  localStorage.setItem('palette', event.currentTarget.value);
 }
 
-function readSavedTheme() { //para leer la paleta guardada
-  const currentTheme = localStorage.getItem('theme');
+function readSavedTheme() {
+  //para leer la paleta guardada
+  const currentTheme = localStorage.getItem('palette');
   return currentTheme;
 }
 
-function checkSavedTheme() { //para sleccionar la paleta guardada
+function checkSavedTheme() {
+  //para sleccionar la paleta guardada
   let savedTheme = readSavedTheme();
   const inputPaletteArray = document.querySelectorAll('.input-palette');
 
   for (let input of inputPaletteArray) {
-    if (input.id === savedTheme) {
+    if (input.value === savedTheme) {
       input.setAttribute('checked', true);
     }
   }
 
-  printSavedTheme()
+  printSavedTheme();
 }
 
-function printSavedTheme() { //para aplicar los estilos de la paleta
+function printSavedTheme() {
+  //para aplicar los estilos de la paleta
   let savedTheme = readSavedTheme();
   const previewCardBox = document.querySelector('.preview__card--box');
 
-  if(savedTheme === 'colorPalette1') {
-    previewPalette1 ()
-  } 
-  if(savedTheme === 'colorPalette2') {
-    previewPalette2 ()
-  } 
-  if(savedTheme === 'colorPalette3') {
-    previewPalette3 ()
-  } 
-  if(savedTheme === 'colorPalette4') {
-    previewPalette4()
-  } 
-
+  if (savedTheme === 'colorPalette1') {
+    previewPalette1();
+  }
+  if (savedTheme === 'colorPalette2') {
+    previewPalette2();
+  }
+  if (savedTheme === 'colorPalette3') {
+    previewPalette3();
+  }
+  if (savedTheme === 'colorPalette4') {
+    previewPalette4();
+  }
 }
 
-
-//Función para formulario
-function saveUserInfo(event) { //para guardar la información en un objeto
+//FUNCIÓN PARA FORMULARIO
+function saveUserInfo(event) {
+  //para guardar la información en un objeto
   const inputName = event.currentTarget.name;
   const inputValue = event.currentTarget.value;
 
@@ -73,51 +74,90 @@ function saveUserInfo(event) { //para guardar la información en un objeto
   setLocalUserInfo();
 }
 
-function setLocalUserInfo() { // para guardar la información en el navegador
-  localStorage.setItem('userInfo', JSON.stringify(userInfo))
+function setLocalUserInfo() {
+  // para guardar la información en local
+  localStorage.setItem('userInfo', JSON.stringify(userInfo));
 }
 
-function readUserInfo() { //para recuperar la información del navegador
-  let savedUserInfo = JSON.parse(localStorage.getItem('userInfo'))
+function readUserInfo() {
+  //para recuperar la información local
+  let savedUserInfo = JSON.parse(localStorage.getItem('userInfo'));
   return savedUserInfo;
 }
 
-function printSavedInfo() { //para añadir la información al formulario
-  let localUserInfo = readUserInfo()
+function printSavedInfo() {
+  //para añadir la información al formulario
+  let localUserInfo = readUserInfo();
   const inputArray = document.querySelectorAll('.input');
 
   for (let item of inputArray) {
-
     if (localUserInfo[item.name] !== undefined) {
-      item.value = localUserInfo[item.name]
+      item.value = localUserInfo[item.name];
     } else {
-      item.value = ''
+      item.value = '';
     }
-
   }
 
-  printInfoToCard()
+  printInfoToCard();
 }
 
-function printInfoToCard() {//para pintar la info en la tarjeta
-  let localUserInfo = readUserInfo()
+function printInfoToCard() {
+  //para pintar la info en la tarjeta
+  let localUserInfo = readUserInfo();
 
-  if (localUserInfo.name === undefined) { //para pintar nombre guardado
-    previewFullName.innerHTML = 'Nombre Apellido'
+  if (localUserInfo.name === undefined) {
+    //para pintar nombre guardado
+    previewFullName.innerHTML = 'Nombre Apellido';
   } else {
     previewFullName.innerHTML = localUserInfo.name;
   }
-  if (localUserInfo.job === undefined) { //para pintar trabajo guardado
+  if (localUserInfo.job === undefined) {
+    //para pintar trabajo guardado
     previewJobPosition.innerHTML = 'Puesto';
   } else {
     previewJobPosition.innerHTML = localUserInfo.job;
   }
 
-  showEmailIcon()
-  showPhoneIcon()
-  showLinkedinIcon()
-  showGithubIcon()
+  showEmailIcon();
+  showPhoneIcon();
+  showLinkedinIcon();
+  showGithubIcon();
+}
 
+//FUNCIÓN PARA LA IMAGEN
+function setProfileImage() {
+  //para guardar imagen en local
+  profileImage.style.backgroundImage = `url(${fr.result})`;
+  let imageUrl = profileImage.style.backgroundImage;
+
+  localStorage.setItem('image', imageUrl);
+}
+
+function readLocalImage() {
+  // para recuperar imagen en local
+  const localImage = localStorage.getItem('image');
+  return localImage;
+}
+
+function printSavedImage() {
+  // para pintar la imagen guardada
+  const savedImage = readLocalImage();
+
+  profileImage.style.backgroundImage = savedImage;
+  profilePreview.style.backgroundImage = savedImage;
+}
+
+//FUNCIÓN PARA BORRAR TODOS LOS DATOS LOCALES CON EL BOTÓN RESET
+
+function removeLocalInfo() {
+  localStorage.removeItem('userInfo');
+  localStorage.removeItem('theme');
+  localStorage.removeItem('image');
+
+  profileImage.style.backgroundImage =
+    'url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e8afef60261411.5a44784a9dcc3.gif)';
+  profilePreview.style.backgroundImage =
+    'url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e8afef60261411.5a44784a9dcc3.gif)';
 }
 
 //Listeners para guardar configuración de color
@@ -134,6 +174,7 @@ inputPhone.addEventListener('keyup', saveUserInfo);
 inputLinkedin.addEventListener('keyup', saveUserInfo);
 inputGithub.addEventListener('keyup', saveUserInfo);
 
-//Listeners para actualizar la información guardada
+//Listeners para actualizar/borrar la información guardada
 window.addEventListener('load', checkSavedTheme);
 window.addEventListener('load', printSavedInfo);
+window.addEventListener('load', printSavedImage);
