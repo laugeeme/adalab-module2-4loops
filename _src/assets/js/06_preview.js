@@ -69,7 +69,7 @@ function changePreviewHeight() {
   const formsBoxHeight = parseInt(formsBox.clientHeight);
   const minHeight = 768;
   if (window.innerWidth <= minHeight) {
-    previewBackground.style.height = '540px';
+    previewBackground.style.height = '572px';
   } else if (formsBoxHeight < minHeight) {
     previewBackground.style.height = `${minHeight}px`;
   } else {
